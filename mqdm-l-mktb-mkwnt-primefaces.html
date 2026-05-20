@@ -1166,7 +1166,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B90000009C109979AF.png" width="221" height="78" style="display:inline-block; margin:4px;width:5.835cm;height:2.064cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B90000009C109979AF.png" /></td></tr></table>
 
 <ul>
-  <li><span style="color: #000000">السطر 1: يعرض النص [1]. كما يعمل كعلامة للمكون </span><i>ذي المعرف <bdi dir="ltr" class="odt-ltr-term">id</bdi>=<bdi dir="ltr" class="odt-ltr-term">ajaxspinner</bdi> </i><span style="color: #000000">(لسمة </span><b><bdi dir="ltr" class="odt-ltr-term">for</bdi></b><span style="color: #000000">). هذا المكون هو الموجود في السطر 3 (سمة </span><b><bdi dir="ltr" class="odt-ltr-term">id</bdi></b><span style="color: #000000">)،</span>
+  <li><span style="color: #000000">السطر 1: يعرض النص [1]. كما يعمل كعلامة للمكون </span><i>ذي المعرف id=<bdi dir="ltr" class="odt-ltr-term">ajaxspinner</bdi> </i><span style="color: #000000">(لسمة </span><b>for</b><span style="color: #000000">). هذا المكون هو الموجود في السطر 3 (سمة </span><b>id</b><span style="color: #000000">)،</span>
   </li>
   <li><span style="color: #000000">الأسطر 3-5: تعرض المكون [2]. هذا المكون هو مكون إدخال/عرض مرتبط بالنموذج </span><span style="color: #0000ff">#{<bdi dir="ltr" class="odt-ltr-term">spinnerController.number5</bdi>} </span><span style="color: #000000">(سمة </span><b>القيمة</b><span style="color: #000000">)،</span>
   </li>
@@ -1190,7 +1190,7 @@
   </li>
   <li>في [3]، يرسل تطبيق الويب استجابة <bdi dir="ltr" class="odt-ltr-term">XML</bdi> (حرف <bdi dir="ltr" class="odt-ltr-term">X</bdi> في <bdi dir="ltr" class="odt-ltr-term">AJAX</bdi>) أو <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> (ترميز كائنات <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>) إلى <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>،
   </li>
-  <li>في [4]، يستخدم <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> هذا الرد لتحديث منطقة معينة من <bdi dir="ltr" class="odt-ltr-term">DOM</bdi>، وهي هنا المنطقة التي تحمل <i>المعرف <bdi dir="ltr" class="odt-ltr-term">id</bdi>=<bdi dir="ltr" class="odt-ltr-term">ajaxspinnervalue</bdi></i>.
+  <li>في [4]، يستخدم <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> هذا الرد لتحديث منطقة معينة من <bdi dir="ltr" class="odt-ltr-term">DOM</bdi>، وهي هنا المنطقة التي تحمل <i>المعرف id=<bdi dir="ltr" class="odt-ltr-term">ajaxspinnervalue</bdi></i>.
   </li>
 </ul>
 
@@ -1225,7 +1225,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 1: يتم تشغيل طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi> بواسطة الزر الموجود في السطر 1. في <bdi dir="ltr" class="odt-ltr-term">PrimeFaces</bdi>، تقوم العلامات التي تطلق طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi> بذلك افتراضيًا عبر استدعاء <bdi dir="ltr" class="odt-ltr-term">AJAX.</bdi> ولهذا السبب تحتوي هذه العلامات على سمة <b>`<bdi dir="ltr" class="odt-ltr-term">update</bdi>` </b>لتحديد المنطقة المراد تحديثها بمجرد استلام استجابة الخادم. وهنا، المنطقة التي يتم تحديثها هي <b><bdi dir="ltr" class="odt-ltr-term">panelGrid</bdi> </b>في السطر 4. لذا، عند عودة استجابة <bdi dir="ltr" class="odt-ltr-term">POST</bdi>، سيتم تحديث هذه المنطقة بالقيم التي تم إرسالها إلى النموذج. ومع ذلك، فإن هذه القيم موجودة داخل مربع حوار مخفي بشكل افتراضي. السمة <b><bdi dir="ltr" class="odt-ltr-term">oncomplete</bdi> </b>في السطر 1 هي التي تعرضه. يحدث هذا الحدث في نهاية معالجة <bdi dir="ltr" class="odt-ltr-term">POST.</bdi> قيمة هذه السمة هي كود <bdi dir="ltr" class="odt-ltr-term">JavaScript.</bdi> هنا، نعرض مربع الحوار الذي <b>يحمل </b><bdi dir="ltr" class="odt-ltr-term">id</bdi>=<bdi dir="ltr" class="odt-ltr-term">dialog</bdi>، وهو المربع الموجود في السطر 3 (السمة <b><bdi dir="ltr" class="odt-ltr-term">widgetVar</bdi></b>)،
+  <li>السطر 1: يتم تشغيل طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi> بواسطة الزر الموجود في السطر 1. في <bdi dir="ltr" class="odt-ltr-term">PrimeFaces</bdi>، تقوم العلامات التي تطلق طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi> بذلك افتراضيًا عبر استدعاء <bdi dir="ltr" class="odt-ltr-term">AJAX.</bdi> ولهذا السبب تحتوي هذه العلامات على سمة <b>`<bdi dir="ltr" class="odt-ltr-term">update</bdi>` </b>لتحديد المنطقة المراد تحديثها بمجرد استلام استجابة الخادم. وهنا، المنطقة التي يتم تحديثها هي <b><bdi dir="ltr" class="odt-ltr-term">panelGrid</bdi> </b>في السطر 4. لذا، عند عودة استجابة <bdi dir="ltr" class="odt-ltr-term">POST</bdi>، سيتم تحديث هذه المنطقة بالقيم التي تم إرسالها إلى النموذج. ومع ذلك، فإن هذه القيم موجودة داخل مربع حوار مخفي بشكل افتراضي. السمة <b><bdi dir="ltr" class="odt-ltr-term">oncomplete</bdi> </b>في السطر 1 هي التي تعرضه. يحدث هذا الحدث في نهاية معالجة <bdi dir="ltr" class="odt-ltr-term">POST.</bdi> قيمة هذه السمة هي كود <bdi dir="ltr" class="odt-ltr-term">JavaScript.</bdi> هنا، نعرض مربع الحوار الذي <b>يحمل </b>id=<bdi dir="ltr" class="odt-ltr-term">dialog</bdi>، وهو المربع الموجود في السطر 3 (السمة <b><bdi dir="ltr" class="odt-ltr-term">widgetVar</bdi></b>)،
   </li>
   <li>السطر 3: نرى سمات مختلفة لمربع الحوار. ستحتاج إلى التجربة لمعرفة وظائفها.
   </li>
@@ -1537,7 +1537,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014E000001BCE8E72853.png" width="167" height="222" style="display:inline-block; margin:4px;width:4.419cm;height:5.874cm;" class="odt-zoomable" data-zoom-src="images/100000000000014E000001BCE8E72853.png" /></td></tr></table>
 
 <ul>
-  <li>سيتم تحديث المنطقة المحددة أعلاه عبر استدعاءات <bdi dir="ltr" class="odt-ltr-term">AJAX.</bdi> لتحديدها، قمنا بتضمينها في حاوية <bdi dir="ltr" class="odt-ltr-term">PrimeFaces</bdi> تم إنشاؤها بواسطة العلامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">p:outputPanel</bdi></b>&gt; (السطر 27). وقد تم تسمية هذه الحاوية <b>بـ `<bdi dir="ltr" class="odt-ltr-term">content</bdi></b>` (سمة <b><bdi dir="ltr" class="odt-ltr-term">id</bdi></b>). نظرًا لوجودها داخل نموذج، وهو في حد ذاته حاوية باسم `<b><bdi dir="ltr" class="odt-ltr-term">form</bdi>`</b>، فإن الاسم الكامل للمنطقة الديناميكية هو <b>`<bdi dir="ltr" class="odt-ltr-term">form:content</bdi>`</b>. تشير العلامة الأولى <b>: </b>إلى أننا نبدأ من جذر المستند، ثم ننتقل إلى الحاوية المسماة &quot;<b><bdi dir="ltr" class="odt-ltr-term">form</bdi>&quot;</b>، ثم إلى الحاوية المسماة &quot;<b><bdi dir="ltr" class="odt-ltr-term">content</bdi>&quot;</b>. أحد التحديات في استخدام <bdi dir="ltr" class="odt-ltr-term">AJAX</bdi> هو تسمية المناطق التي سيتم تحديثها بواسطة استدعاء <bdi dir="ltr" class="odt-ltr-term">AJAX</bdi> بشكل صحيح. أبسط طريقة هي النظر إلى شفرة المصدر لصفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> المستلمة:
+  <li>سيتم تحديث المنطقة المحددة أعلاه عبر استدعاءات <bdi dir="ltr" class="odt-ltr-term">AJAX.</bdi> لتحديدها، قمنا بتضمينها في حاوية <bdi dir="ltr" class="odt-ltr-term">PrimeFaces</bdi> تم إنشاؤها بواسطة العلامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">p:outputPanel</bdi></b>&gt; (السطر 27). وقد تم تسمية هذه الحاوية <b>بـ `<bdi dir="ltr" class="odt-ltr-term">content</bdi></b>` (سمة <b>id</b>). نظرًا لوجودها داخل نموذج، وهو في حد ذاته حاوية باسم `<b><bdi dir="ltr" class="odt-ltr-term">form</bdi>`</b>، فإن الاسم الكامل للمنطقة الديناميكية هو <b>`<bdi dir="ltr" class="odt-ltr-term">form:content</bdi>`</b>. تشير العلامة الأولى <b>: </b>إلى أننا نبدأ من جذر المستند، ثم ننتقل إلى الحاوية المسماة &quot;<b><bdi dir="ltr" class="odt-ltr-term">form</bdi>&quot;</b>، ثم إلى الحاوية المسماة &quot;<b><bdi dir="ltr" class="odt-ltr-term">content</bdi>&quot;</b>. أحد التحديات في استخدام <bdi dir="ltr" class="odt-ltr-term">AJAX</bdi> هو تسمية المناطق التي سيتم تحديثها بواسطة استدعاء <bdi dir="ltr" class="odt-ltr-term">AJAX</bdi> بشكل صحيح. أبسط طريقة هي النظر إلى شفرة المصدر لصفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> المستلمة:
   </li>
 </ul>
 
@@ -1667,7 +1667,7 @@
 <ul>
   <li>سنستخدم القالب [<bdi dir="ltr" class="odt-ltr-term">layout.xhtml</bdi>] كقالب للصفحة،
   </li>
-  <li>وسيتم تحديد المنطقة الديناميكية بواسطة المعرف <bdi dir="ltr" class="odt-ltr-term">id</bdi><b>:<bdi dir="ltr" class="odt-ltr-term">form:content</bdi> </b>وسيتم تحديثها عبر استدعاءات <bdi dir="ltr" class="odt-ltr-term">AJAX.</bdi>
+  <li>وسيتم تحديد المنطقة الديناميكية بواسطة المعرف id<b>:<bdi dir="ltr" class="odt-ltr-term">form:content</bdi> </b>وسيتم تحديثها عبر استدعاءات <bdi dir="ltr" class="odt-ltr-term">AJAX.</bdi>
   </li>
 </ul>
 
@@ -2249,7 +2249,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">p:growl</span><span style="color:#000000"> </span><span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;messages&quot;</span><span style="color:#000000"> </span><span style="color:#7f007f">autoUpdate</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;true&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">في المثال أعلاه، لم يتم استخدام السمة </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">id</bdi></span></strong><span style="color: #000000">. تشير السمة </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">autoUpdate</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi> </span></strong><span style="color: #000000">إلى أنه يجب تحديث قائمة رسائل الخطأ مع كل عملية إرسال (<bdi dir="ltr" class="odt-ltr-term">POST</bdi>) للنموذج.</span></p>
+<p><span style="color: #000000">في المثال أعلاه، لم يتم استخدام السمة </span><strong><span style="color: #000000">id</span></strong><span style="color: #000000">. تشير السمة </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">autoUpdate</bdi>=<bdi dir="ltr" class="odt-ltr-term">true</bdi> </span></strong><span style="color: #000000">إلى أنه يجب تحديث قائمة رسائل الخطأ مع كل عملية إرسال (<bdi dir="ltr" class="odt-ltr-term">POST</bdi>) للنموذج.</span></p>
 <p><span style="color: #000000">لنفترض أننا أرسلنا النموذج التالي [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FF0000011CA2F28226.png" width="640" height="142" style="display:inline-block; margin:4px;width:16.921cm;height:3.757cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FF0000011CA2F28226.png" /></td></tr></table>
 
@@ -2651,7 +2651,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 </code></pre></div>
 
-<p>هذه هي التقنية التي يجب استخدامها عندما لا تكون العلاقة بين سمات <code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;rowkey&lt;/bdi&gt;</code><strong> و<code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;selection&lt;/bdi&gt;</code></strong> علاقة بسيطة بين الخاصية والكائن (<code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;rowkey&lt;/bdi&gt;**</code> إلى <code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;selection&lt;/bdi&gt;**</code>).</p>
+<p>هذه هي التقنية التي يجب استخدامها عندما لا تكون العلاقة بين سمات <code>**rowkey</code><strong> و<code>**selection</code></strong> علاقة بسيطة بين الخاصية والكائن (<code>**rowkey**</code> إلى <code>**selection**</code>).</p>
 <p><a id="refheading10508310005176"></a></p>
 <h2 id="516-mv-pf-13-datatable-4">5.16. <span style="color: #4f81bd">مثال: <bdi dir="ltr" class="odt-ltr-term">mv-pf-13: dataTable</bdi> - 4</span></h2>
 <p>هذا المشروع مشابه للمشروع السابق، باستثناء أن طريقة اختيار الشخص المراد إزالته تتغير:</p>
@@ -2691,7 +2691,7 @@
 </code></pre></div>
 
 <ul>
-  <li>الأسطر 9–11: تعريف قائمة سياق لـ (للسمة) <i><bdi dir="ltr" class="odt-ltr-term">dataTable</bdi> </i>في السطر 21 (السمة <b><bdi dir="ltr" class="odt-ltr-term">id</bdi></b>). تظهر قائمة السياق هذه عند النقر بزر الماوس الأيمن على جدول الأشخاص،
+  <li>الأسطر 9–11: تعريف قائمة سياق لـ (للسمة) <i><bdi dir="ltr" class="odt-ltr-term">dataTable</bdi> </i>في السطر 21 (السمة <b>id</b>). تظهر قائمة السياق هذه عند النقر بزر الماوس الأيمن على جدول الأشخاص،
   </li>
   <li>السطر 10: تحتوي قائمتنا على خيار واحد فقط (علامة <b><bdi dir="ltr" class="odt-ltr-term">menuItem</bdi></b>). عند النقر فوق هذا الخيار، يتم تنفيذ كود <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> الموجود في السمة <b><bdi dir="ltr" class="odt-ltr-term">onclick</bdi></b>. يعرض كود <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> [<span style="color: #2a00ff"><bdi dir="ltr" class="odt-ltr-term">confirmation.show</bdi>()</span>] مربع الحوار من السطر 14 (السمة <b><bdi dir="ltr" class="odt-ltr-term">widgetVar</bdi></b>). وهو كما يلي:
   </li>

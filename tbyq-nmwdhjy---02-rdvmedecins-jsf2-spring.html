@@ -1050,7 +1050,7 @@
   </li>
 </ul>
 
-<p>الآن بعد أن أصبح لدينا التبعيات، نلصق كود مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]:</p>
+<p>الآن بعد أن أصبح لدينا التبعيات، نلصق كود مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من طبقة [dao] في مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في طبقة [dao]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B60000013CD8A7F7BE.png" width="603" height="158" style="display:inline-block; margin:4px;width:15.954cm;height:4.18cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B60000013CD8A7F7BE.png" /></td></tr></table>
 
 <ul>
@@ -1069,7 +1069,7 @@
 
 <p>تحتوي فئة [<bdi dir="ltr" class="odt-ltr-term">RdvMedecinsExceptions</bdi>] [1] على أخطاء لأن حزمة [<bdi dir="ltr" class="odt-ltr-term">javax</bdi>] في السطر 4 لم تعد موجودة. هذه حزمة خاصة بـ <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> ينشأ الخطأ في السطر 6 عن الخطأ الموجود في السطر 4. نقوم بحذف هذين السطرين. وهذا يحل الأخطاء [2].</p>
 <p><a id="refheading7741830114625"></a></p>
-<h3 id="413-jpa">4.1.3. <span style="color: #4f81bd">حزمة [<bdi dir="ltr" class="odt-ltr-term">jpa</bdi>]</span></h3>
+<h3 id="413-jpa">4.1.3. <span style="color: #4f81bd">حزمة [jpa]</span></h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CA0000026A98808703.png" width="613" height="309" style="display:inline-block; margin:4px;width:16.219cm;height:8.176cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CA0000026A98808703.png" /></td></tr></table>
 
 <ul>
@@ -1078,14 +1078,14 @@
 </ul>
 
 <p><a id="refheading7742030114625"></a></p>
-<h3 id="414-dao">4.1.4. <span style="color: #4f81bd">حزمة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="414-dao">4.1.4. <span style="color: #4f81bd">حزمة [dao]</span></h3>
 <p>نحن الآن في النقطة التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DC0000010714869FD8.png" width="366" height="131" style="display:inline-block; margin:4px;width:9.684cm;height:3.478cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DC0000010714869FD8.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، الحزمتان المصححتان،
   </li>
-  <li>في [2]، الحزمة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. وبما أنه لم يعد هناك أي <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi>، فإن مفاهيم واجهات <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> البعيدة والمحلية لم تعد سارية. نقوم بإزالتها [3].
+  <li>في [2]، الحزمة [dao]. وبما أنه لم يعد هناك أي <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi>، فإن مفاهيم واجهات <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> البعيدة والمحلية لم تعد سارية. نقوم بإزالتها [3].
   </li>
 </ul>
 
@@ -1192,7 +1192,7 @@
 <ul>
   <li>الأسطر 2–4: العلامة الجذرية &lt;<bdi dir="ltr" class="odt-ltr-term">beans</bdi>&gt; لملف التكوين. لن نعلق على السمات المختلفة لهذه العلامة. تأكد من النسخ واللصق بعناية، لأن أي خطأ في أي من هذه السمات قد يتسبب في أخطاء يصعب فهمها أحيانًا.
   </li>
-  <li>السطر 7: <bdi dir="ltr" class="odt-ltr-term">bean</bdi> &quot;<bdi dir="ltr" class="odt-ltr-term">dao</bdi>&quot; هو مرجع إلى مثيل لفئة [<span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">rdvmedecins.dao.DaoJpa</bdi></span>]. سيتم إنشاء مثيل واحد (<bdi dir="ltr" class="odt-ltr-term">singleton</bdi>) وسيقوم بتنفيذ طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] للتطبيق،
+  <li>السطر 7: <bdi dir="ltr" class="odt-ltr-term">bean</bdi> &quot;dao&quot; هو مرجع إلى مثيل لفئة [<span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">rdvmedecins.dao.DaoJpa</bdi></span>]. سيتم إنشاء مثيل واحد (<bdi dir="ltr" class="odt-ltr-term">singleton</bdi>) وسيقوم بتنفيذ طبقة [dao] للتطبيق،
   </li>
   <li>الأسطر 24-29: يتم تعريف مصدر البيانات. يوفر خدمة &quot;مجمع الاتصالات&quot; التي ذكرناها سابقًا. يتم استخدام [<bdi dir="ltr" class="odt-ltr-term">DBCP</bdi>] من مشروع<i> <bdi dir="ltr" class="odt-ltr-term">Apache Commons DBCP</bdi> </i>[<bdi dir="ltr" class="odt-ltr-term">http://jakarta.apache.org/commons/dbcp/</bdi>] هنا،
   </li>
@@ -1253,7 +1253,7 @@
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000031E000003110062CA5D.png" width="399" height="393" style="display:inline-block; margin:4px;width:10.557cm;height:10.386cm;" class="odt-zoomable" data-zoom-src="images/100000000000031E000003110062CA5D.png" /></td></tr></table>
 
-<p>الخطأ المبلغ عنه في [1] هو أن الواجهة البعيدة لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> لم تعد موجودة. علاوة على ذلك، كان كود التهيئة لحقل [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في السطر 19 عبارة عن استدعاء <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> خاص بـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> (الأسطر 25–28). لإنشاء مثيل لحقل [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] في السطر 19، نحتاج إلى استخدام ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> ويتم ذلك على النحو التالي:</p>
+<p>الخطأ المبلغ عنه في [1] هو أن الواجهة البعيدة لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> لم تعد موجودة. علاوة على ذلك، كان كود التهيئة لحقل [dao] في السطر 19 عبارة عن استدعاء <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> خاص بـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> (الأسطر 25–28). لإنشاء مثيل لحقل [dao] في السطر 19، نحتاج إلى استخدام ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> ويتم ذلك على النحو التالي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000044A000002E3E3516C63.png" width="549" height="370" style="display:inline-block; margin:4px;width:14.526cm;height:9.777cm;" class="odt-zoomable" data-zoom-src="images/100000000000044A000002E3E3516C63.png" /></td></tr></table>
 
 <ul>
@@ -1268,7 +1268,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 29 يطلب مرجعًا إلى الفاصولية ذات <span style="color: #800080">المعرف <bdi dir="ltr" class="odt-ltr-term">id</bdi>=&quot;</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">dao</bdi></span><span style="color: #800080">&quot; </span>من سياق <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في السطر 28. ثم نحصل على مرجع إلى الفاصولية الفردية [<bdi dir="ltr" class="odt-ltr-term">DaoJpa</bdi>] (<i>الفئة </i>أعلاه) التي أنشأ <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مثيلًا لها.
+  <li>السطر 29 يطلب مرجعًا إلى الفاصولية ذات <span style="color: #800080">المعرف id=&quot;</span><span style="color: #0000ff">dao</span><span style="color: #800080">&quot; </span>من سياق <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في السطر 28. ثم نحصل على مرجع إلى الفاصولية الفردية [<bdi dir="ltr" class="odt-ltr-term">DaoJpa</bdi>] (<i>الفئة </i>أعلاه) التي أنشأ <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> مثيلًا لها.
   </li>
 </ul>
 
@@ -1429,7 +1429,7 @@
   </li>
   <li>الأسطر 5-10: سجلات <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi>،
   </li>
-  <li>السطر 11: <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> يبلغ عن جميع الفاصوليا التي قام بإنشاء مثيل لها. أولاً، نرى فاصوليا [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]،
+  <li>السطر 11: <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> يبلغ عن جميع الفاصوليا التي قام بإنشاء مثيل لها. أولاً، نرى فاصوليا [dao]،
   </li>
   <li>السطور 12 وما يليها: سجلات اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit</bdi>،
   </li>
@@ -1437,7 +1437,7 @@
   </li>
 </ul>
 
-<p>طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] جاهزة للعمل. سنقوم الآن ببناء طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>].</p>
+<p>طبقة [dao] جاهزة للعمل. سنقوم الآن ببناء طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>].</p>
 <p><a id="refheading7742830114625"></a></p>
 <h2 id="42-business">4.2. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</span></h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F40000010FBF9685C2.png" width="634" height="135" style="display:inline-block; margin:4px;width:16.775cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F40000010FBF9685C2.png" /></td></tr></table>
@@ -1563,7 +1563,7 @@
   </li>
   <li>الأسطر 3-5: حبة طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]،
   </li>
-  <li>السطر 3: يُسمى <bdi dir="ltr" class="odt-ltr-term">bean</bdi> <i><bdi dir="ltr" class="odt-ltr-term">métier</bdi> </i>(سمة <i><bdi dir="ltr" class="odt-ltr-term">id</bdi></i>) وهو مثيل لفئة [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins.metier.service.Metier</bdi>] (سمة <i><bdi dir="ltr" class="odt-ltr-term">class</bdi></i>). سيتم إنشاء مثيل لهذا <bdi dir="ltr" class="odt-ltr-term">bean</bdi> مثل الباقي عند بدء تشغيل التطبيق.
+  <li>السطر 3: يُسمى <bdi dir="ltr" class="odt-ltr-term">bean</bdi> <i><bdi dir="ltr" class="odt-ltr-term">métier</bdi> </i>(سمة <i>id</i>) وهو مثيل لفئة [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins.metier.service.Metier</bdi>] (سمة <i><bdi dir="ltr" class="odt-ltr-term">class</bdi></i>). سيتم إنشاء مثيل لهذا <bdi dir="ltr" class="odt-ltr-term">bean</bdi> مثل الباقي عند بدء تشغيل التطبيق.
   </li>
 </ul>
 
@@ -1583,7 +1583,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 8: سيتم إنشاء مثيل للحقل [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في نفس الوقت الذي يتم فيه إنشاء مثيل لـ <i><bdi dir="ltr" class="odt-ltr-term">business</bdi> </i><bdi dir="ltr" class="odt-ltr-term">bean.</bdi> دعونا نعود إلى تعريف هذا <bdi dir="ltr" class="odt-ltr-term">bean</bdi> في ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring:</bdi>
+  <li>السطر 8: سيتم إنشاء مثيل للحقل [dao] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في نفس الوقت الذي يتم فيه إنشاء مثيل لـ <i><bdi dir="ltr" class="odt-ltr-term">business</bdi> </i><bdi dir="ltr" class="odt-ltr-term">bean.</bdi> دعونا نعود إلى تعريف هذا <bdi dir="ltr" class="odt-ltr-term">bean</bdi> في ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring:</bdi>
   </li>
 </ul>
 
@@ -1598,7 +1598,7 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nt">&lt;/bean&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>السطر 4: تُستخدم علامة &lt;<bdi dir="ltr" class="odt-ltr-term">property</bdi>&gt; لتهيئة حقول الكائن الذي تم إنشاء مثيل له. يتم تحديد اسم الحقل بواسطة السمة <i><bdi dir="ltr" class="odt-ltr-term">name</bdi></i>. وبالتالي، سيتم إنشاء مثيل لحقل <b><bdi dir="ltr" class="odt-ltr-term">dao</bdi> </b>الخاص بفئة [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins.metier.service.Metier</bdi>]. ويتم ذلك عبر طريقة <bdi dir="ltr" class="odt-ltr-term">setDao</bdi>، التي يجب أن تكون موجودة. والقيمة المخصصة لها هي قيمة السمة <b><bdi dir="ltr" class="odt-ltr-term">ref</bdi></b>. وهنا، تمثل هذه القيمة الإشارة إلى حبة <b><bdi dir="ltr" class="odt-ltr-term">dao</bdi> </b>من السطر 2.
+  <li>السطر 4: تُستخدم علامة &lt;<bdi dir="ltr" class="odt-ltr-term">property</bdi>&gt; لتهيئة حقول الكائن الذي تم إنشاء مثيل له. يتم تحديد اسم الحقل بواسطة السمة <i><bdi dir="ltr" class="odt-ltr-term">name</bdi></i>. وبالتالي، سيتم إنشاء مثيل لحقل <b>dao </b>الخاص بفئة [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins.metier.service.Metier</bdi>]. ويتم ذلك عبر طريقة <bdi dir="ltr" class="odt-ltr-term">setDao</bdi>، التي يجب أن تكون موجودة. والقيمة المخصصة لها هي قيمة السمة <b>ref</b>. وهنا، تمثل هذه القيمة الإشارة إلى حبة <b>dao </b>من السطر 2.
   </li>
 </ul>
 
@@ -1617,7 +1617,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>سيتم تهيئة حقل <strong><bdi dir="ltr" class="odt-ltr-term">dao</bdi></strong> في السطر 19 بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بإشارة إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]. وهذا ما كنا نريده. سيتم تهيئة حقل <strong><bdi dir="ltr" class="odt-ltr-term">dao</bdi></strong> بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> عبر <em>مُعيّن</em> (<bdi dir="ltr" class="odt-ltr-term">setter</bdi>) يتعين علينا إضافته:</p>
+<p>سيتم تهيئة حقل <strong>dao</strong> في السطر 19 بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> بإشارة إلى طبقة [dao]. وهذا ما كنا نريده. سيتم تهيئة حقل <strong>dao</strong> بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> عبر <em>مُعيّن</em> (<bdi dir="ltr" class="odt-ltr-term">setter</bdi>) يتعين علينا إضافته:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// setter</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1871,7 +1871,7 @@
 </code></pre></div>
 
 <ul>
-  <li>تمت إضافة الأسطر 7–16 إلى ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>]. هذه هي التبعيات الخاصة بـ <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi> وهي التبعيات المستخدمة في مشروع <bdi dir="ltr" class="odt-ltr-term">EJB/GlassFish.</bdi> لاحظ أنها لا تحتوي على علامة &lt;<bdi dir="ltr" class="odt-ltr-term">scope</bdi>&gt;. لذلك، فإن نطاقها هو [<bdi dir="ltr" class="odt-ltr-term">compile</bdi>] بشكل افتراضي. وبالتالي، سيتم تضمين مكتبة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> في أرشيف [<bdi dir="ltr" class="odt-ltr-term">war</bdi>] الخاص بمشروع الويب.
+  <li>تمت إضافة الأسطر 7–16 إلى ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>]. هذه هي التبعيات الخاصة بـ <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi> وهي التبعيات المستخدمة في مشروع <bdi dir="ltr" class="odt-ltr-term">EJB/GlassFish.</bdi> لاحظ أنها لا تحتوي على علامة &lt;<bdi dir="ltr" class="odt-ltr-term">scope</bdi>&gt;. لذلك، فإن نطاقها هو [<bdi dir="ltr" class="odt-ltr-term">compile</bdi>] بشكل افتراضي. وبالتالي، سيتم تضمين مكتبة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> في أرشيف [war] الخاص بمشروع الويب.
   </li>
 </ul>
 
@@ -2034,7 +2034,7 @@
 <ul>
   <li>تقوم الأسطر 10–19 بتكوين ملف الرسائل. كان هذا هو التكوين الوحيد الذي كان لدينا في مشروع <bdi dir="ltr" class="odt-ltr-term">JSF/EJB</bdi>،
   </li>
-  <li>تُعلن الأسطر من 21 إلى 35 عن حبوب تطبيق <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi> وكان هذا هو النهج القياسي في <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> 1.<bdi dir="ltr" class="odt-ltr-term">x.</bdi> وقد أدخلت <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> 2 نظام التعليقات التوضيحية، لكن طريقة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> 1.<bdi dir="ltr" class="odt-ltr-term">x</bdi> لا تزال مدعومة،
+  <li>تُعلن الأسطر من 21 إلى 35 عن حبوب تطبيق <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi> وكان هذا هو النهج القياسي في <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> 1.<bdi dir="ltr" class="odt-ltr-term">x.</bdi> وقد أدخلت <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> 2 نظام التعليقات التوضيحية، لكن طريقة <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> 1.x لا تزال مدعومة،
   </li>
   <li>الأسطر 21–25: تعلن عن <b><bdi dir="ltr" class="odt-ltr-term">applicationBean</bdi></b>،
   </li>
@@ -2118,13 +2118,13 @@
   </li>
 </ul>
 
-<p><span style="color: #000000">بعد ذلك، ضع برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi> في </span><em>&lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;/<bdi dir="ltr" class="odt-ltr-term">lib</bdi>،</em> <span style="color: #000000">حيث </span><em>&lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;</em> <span style="color: #000000">هو دليل تثبيت <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi></span></p>
+<p><span style="color: #000000">بعد ذلك، ضع برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi> في </span><em>&lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;/lib،</em> <span style="color: #000000">حيث </span><em>&lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;</em> <span style="color: #000000">هو دليل تثبيت <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi></span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003C6000001E210836A2C.png" width="483" height="241" style="display:inline-block; margin:4px;width:12.779cm;height:6.376cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C6000001E210836A2C.png" /></td></tr></table>
 
 <ul>
   <li><span style="color: #000000">في [1]، ضمن خصائص <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi>، لاحظ دليل التثبيت &lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;،</span>
   </li>
-  <li><span style="color: #000000">في &lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;/<bdi dir="ltr" class="odt-ltr-term">lib</bdi> [2]، ضع برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi> حديث [3].</span>
+  <li><span style="color: #000000">في &lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;/lib [2]، ضع برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi> حديث [3].</span>
   </li>
 </ul>
 

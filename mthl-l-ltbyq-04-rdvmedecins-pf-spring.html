@@ -703,7 +703,7 @@
 <ul>
   <li><span style="color: #000000">طبقات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] من الإصدار 02 لـ <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> / <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>،</span>
   </li>
-  <li><span style="color: #000000">طبقة [<bdi dir="ltr" class="odt-ltr-term">web</bdi>] / <bdi dir="ltr" class="odt-ltr-term">Primefaces</bdi> من الإصدار 03 لـ <bdi dir="ltr" class="odt-ltr-term">PF</bdi> / <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>،</span>
+  <li><span style="color: #000000">طبقة [web] / <bdi dir="ltr" class="odt-ltr-term">Primefaces</bdi> من الإصدار 03 لـ <bdi dir="ltr" class="odt-ltr-term">PF</bdi> / <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>،</span>
   </li>
   <li><span style="color: #000000">ملفات تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> من الإصدار 02</span>
   </li>
@@ -761,7 +761,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">تظهر أخطاء. وهي ناتجة عن مراجع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في طبقة [<bdi dir="ltr" class="odt-ltr-term">web</bdi>]. دعونا أولاً نفحص حبة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]:</span></p>
+<p><span style="color: #000000">تظهر أخطاء. وهي ناتجة عن مراجع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في طبقة [web]. دعونا أولاً نفحص حبة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D4000002B216C33777.png" width="618" height="345" style="display:inline-block; margin:4px;width:16.351cm;height:9.128cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D4000002B216C33777.png" /></td></tr></table>
 
 <p><span style="color: #000000">نقوم بإزالة جميع الأسطر التي تسبب أخطاء بسبب الحزم المفقودة، ونعيد تسمية [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>] (اسمها في طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] في <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>) إلى واجهة [<bdi dir="ltr" class="odt-ltr-term">IMetierLocal</bdi>]، ونستخدم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لإنشاء مثيل لها:</span></p>
