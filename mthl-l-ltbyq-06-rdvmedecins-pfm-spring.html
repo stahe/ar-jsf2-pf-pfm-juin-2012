@@ -727,28 +727,28 @@
 <p><a id="refheading105125100051761"></a></p>
 <h2 id="101">10.1. <span style="color: #4f81bd"><span style="color: #4f81bd">النقل</span></span></h2>
 <p><span style="color: #000000">سنقوم الآن بنقل التطبيق السابق إلى بيئة <bdi dir="ltr" class="odt-ltr-term">Spring/Tomcat:</bdi></span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E90000011A5052F9EC.png" width="629" height="141" style="display:inline-block; margin:4px;width:16.63cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E90000011A5052F9EC.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E90000011A5052F9EC.png" width="629" height="141" style="display:inline-block; margin:4px;width:16.63cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E90000011A5052F9EC.png" /></td></tr></table>
 
 <p><span style="color: #000000">سنعتمد على تطبيقين تمت كتابتهما بالفعل. سنستخدم:</span></p>
 <ul>
-  <li><span style="color: #000000">طبقتي [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] من الإصدار 02 <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> / <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>،</span>
+  <li><span style="color: #000000">طبقتي [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] من الإصدار 02 <bdi dir="ltr" class="odt-ltr-term">JSF / Spring</bdi>،</span>
   </li>
-  <li><span style="color: #000000">طبقة [web] / <bdi dir="ltr" class="odt-ltr-term">Primefaces Mobile</bdi> من الإصدار 05 <bdi dir="ltr" class="odt-ltr-term">PFM</bdi> / <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>،</span>
+  <li><span style="color: #000000">طبقة [web] / <bdi dir="ltr" class="odt-ltr-term">Primefaces Mobile</bdi> من الإصدار 05 <bdi dir="ltr" class="odt-ltr-term">PFM / EJB</bdi>،</span>
   </li>
   <li><span style="color: #000000">ملفات تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> من الإصدار 02</span>
   </li>
 </ul>
 
-<p><span style="color: #000000">هنا، نقوم بمهمة مشابهة لتلك التي تم القيام بها لنقل تطبيق <bdi dir="ltr" class="odt-ltr-term">JSF2</bdi> / <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> / <bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi> إلى بيئة <bdi dir="ltr" class="odt-ltr-term">JSF2</bdi> / <bdi dir="ltr" class="odt-ltr-term">Spring Tomcat.</bdi> لذلك، سنقدم تفسيرات أقل. إذا لزم الأمر، يمكن للقارئ الرجوع إلى ذلك النقل.</span></p>
+<p><span style="color: #000000">هنا، نقوم بمهمة مشابهة لتلك التي تم القيام بها لنقل تطبيق <bdi dir="ltr" class="odt-ltr-term">JSF2 / EJB / Glassfish</bdi> إلى بيئة <bdi dir="ltr" class="odt-ltr-term">JSF2 / Spring Tomcat.</bdi> لذلك، سنقدم تفسيرات أقل. إذا لزم الأمر، يمكن للقارئ الرجوع إلى ذلك النقل.</span></p>
 <p><span style="color: #000000">نضع جميع المشاريع اللازمة لعملية النقل في مجلد جديد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-pfm-spring</bdi>] [1]:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050E0000012E8297FB7D.png" width="647" height="151" style="display:inline-block; margin:4px;width:17.119cm;height:3.995cm;" class="odt-zoomable" data-zoom-src="images/100000000000050E0000012E8297FB7D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000050E0000012E8297FB7D.png" width="647" height="151" style="display:inline-block; margin:4px;width:17.119cm;height:3.995cm;" class="odt-zoomable" data-zoom-src="images/100000000000050E0000012E8297FB7D.png" /></td></tr></table>
 
 <ul>
   <li><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">mv-rdvmedecins-spring-dao-jpa</bdi>]: طبقات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] لإصدار <bdi dir="ltr" class="odt-ltr-term">JSF/Spring</bdi> 02،</span>
   </li>
-  <li><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">mv-rdvmedecins-spring-metier</bdi>]: طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] من الإصدار 02 <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> / <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>،</span>
+  <li><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">mv-rdvmedecins-spring-metier</bdi>]: طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] من الإصدار 02 <bdi dir="ltr" class="odt-ltr-term">JSF / Spring</bdi>،</span>
   </li>
-  <li><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">mv-rdvmedecins-pfmobile</bdi>]: طبقة [web] من <bdi dir="ltr" class="odt-ltr-term">PrimeFaces Mobile</bdi> / <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> الإصدار 05،</span>
+  <li><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">mv-rdvmedecins-pfmobile</bdi>]: طبقة [web] من <bdi dir="ltr" class="odt-ltr-term">PrimeFaces Mobile / EJB</bdi> الإصدار 05،</span>
   </li>
   <li><span style="color: #000000">في [2]، نقوم بتحميلها في <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>،</span>
   </li>
@@ -763,7 +763,7 @@
 </ul>
 
 <p><span style="color: #000000">يتطور مشروع [الويب] على النحو التالي:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002010000018764250CA2.png" width="257" height="196" style="display:inline-block; margin:4px;width:6.787cm;height:5.173cm;" class="odt-zoomable" data-zoom-src="images/10000000000002010000018764250CA2.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002010000018764250CA2.png" width="257" height="196" style="display:inline-block; margin:4px;width:6.787cm;height:5.173cm;" class="odt-zoomable" data-zoom-src="images/10000000000002010000018764250CA2.png" /></td></tr></table>
 
 <p><span style="color: #000000">يحتوي ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] الخاص بطبقة [الويب] الآن على التبعيات التالية:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -804,7 +804,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">تظهر أخطاء. وهي ناتجة عن مراجع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> في طبقة [web]. دعونا أولاً نفحص حبة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000481000002522F8AF1C3.png" width="577" height="297" style="display:inline-block; margin:4px;width:15.254cm;height:7.858cm;" class="odt-zoomable" data-zoom-src="images/1000000000000481000002522F8AF1C3.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000481000002522F8AF1C3.png" width="577" height="297" style="display:inline-block; margin:4px;width:15.254cm;height:7.858cm;" class="odt-zoomable" data-zoom-src="images/1000000000000481000002522F8AF1C3.png" /></td></tr></table>
 
 <p><span style="color: #000000">نقوم بإزالة جميع الأسطر التي تسبب أخطاء بسبب الحزم المفقودة، ونعيد تسمية واجهة [<bdi dir="ltr" class="odt-ltr-term">IMetierLocal</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>] (وهذا هو اسمها في طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] في <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>)، ونستخدم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لإنشاء مثيل لها:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -861,7 +861,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003420000014064DB3365.png" width="417" height="160" style="display:inline-block; margin:4px;width:11.033cm;height:4.233cm;" class="odt-zoomable" data-zoom-src="images/10000000000003420000014064DB3365.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003420000014064DB3365.png" width="417" height="160" style="display:inline-block; margin:4px;width:11.033cm;height:4.233cm;" class="odt-zoomable" data-zoom-src="images/10000000000003420000014064DB3365.png" /></td></tr></table>
 
 <ul>
   <li><span style="color: #000000">السطور 22-31: نتعامل مع أي استثناءات ونخزن تتبع المكدس الخاص بها في الحقل الموجود في السطر 14.</span>
@@ -869,9 +869,9 @@
 </ul>
 
 <p><span style="color: #000000">وبذلك، لم يعد لدى حبة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] أي أخطاء. لنلقِ نظرة الآن على حبة [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>] [1]، [2]:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A0000002A4FC54EC56.png" width="592" height="338" style="display:inline-block; margin:4px;width:15.663cm;height:8.943cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A0000002A4FC54EC56.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004A0000002A4FC54EC56.png" width="592" height="338" style="display:inline-block; margin:4px;width:15.663cm;height:8.943cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A0000002A4FC54EC56.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>3</b></div><img src="images/10000000000000D1000000A837612899.png" width="146" height="118" style="display:inline-block; margin:4px;width:3.87cm;height:3.112cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D1000000A837612899.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>4</b></div><img src="images/10000000000000C9000000B71BBC6695.png" width="141" height="128" style="display:inline-block; margin:4px;width:3.72cm;height:3.387cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C9000000B71BBC6695.png" /></td></tr></table></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>3</b></div><img src="images/10000000000000D1000000A837612899.png" width="146" height="118" style="display:inline-block; margin:4px;width:3.87cm;height:3.112cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D1000000A837612899.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0"><b>4</b></div><img src="images/10000000000000C9000000B71BBC6695.png" width="141" height="128" style="display:inline-block; margin:4px;width:3.72cm;height:3.387cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C9000000B71BBC6695.png" /></td></tr></table></td></tr></table>
 
 <p><span style="color: #000000">نقوم بإزالة جميع الأسطر الخاطئة (عمليات الاستيراد والتعليقات التوضيحية) الناتجة عن الحزم المفقودة، ونقوم بتغيير اسم واجهة [<bdi dir="ltr" class="odt-ltr-term">ImetierLocal</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>]. وهذا يكفي لإزالة جميع الأخطاء [3].</span></p>
 <p><span style="color: #000000">بالإضافة إلى ذلك، نحتاج إلى إضافة دالتي <bdi dir="ltr" class="odt-ltr-term">getter</bdi> و <bdi dir="ltr" class="odt-ltr-term">setter</bdi> للحقل </span></p>
@@ -922,7 +922,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">تم الانتهاء من إعداد المنفذ. يمكننا الآن تجربة تشغيل تطبيق الويب.</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000173000002DF769E65A0.png" width="186" height="368" style="display:inline-block; margin:4px;width:4.911cm;height:9.73cm;" class="odt-zoomable" data-zoom-src="images/1000000000000173000002DF769E65A0.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000173000002DF769E65A0.png" width="186" height="368" style="display:inline-block; margin:4px;width:4.911cm;height:9.73cm;" class="odt-zoomable" data-zoom-src="images/1000000000000173000002DF769E65A0.png" /></td></tr></table>
 
 <p><span style="color: #000000">نترك للقارئ مهمة اختبار هذا التطبيق الجديد. يمكننا تحسينه قليلاً للتعامل مع الحالة التي تفشل فيها تهيئة حبة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]. نعلم أنه في هذه الحالة، تمت تهيئة الحقول التالية:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -966,18 +966,18 @@
 <p><a id="refheading105129100051761"></a></p>
 <h2 id="103-eclipse">10.3. <span style="color: #4f81bd">الاختبارات باستخدام <bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi></span></h2>
 <p><span style="color: #000000">نقوم باستيراد مشاريع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> إلى <bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi> [1]:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005080000011B990B062E.png" width="644" height="142" style="display:inline-block; margin:4px;width:17.039cm;height:3.745cm;" class="odt-zoomable" data-zoom-src="images/10000000000005080000011B990B062E.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005080000011B990B062E.png" width="644" height="142" style="display:inline-block; margin:4px;width:17.039cm;height:3.745cm;" class="odt-zoomable" data-zoom-src="images/10000000000005080000011B990B062E.png" /></td></tr></table>
 
 <p><span style="color: #000000">نقوم بتشغيل مشروع الويب [2].</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000504000001923996856D.png" width="642" height="201" style="display:inline-block; margin:4px;width:16.986cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/1000000000000504000001923996856D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000504000001923996856D.png" width="642" height="201" style="display:inline-block; margin:4px;width:16.986cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/1000000000000504000001923996856D.png" /></td></tr></table>
 
 <p><span style="color: #000000">نختار خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> [3]. ثم تُعرض الصفحة الرئيسية للتطبيق في المتصفح الداخلي لبرنامج <bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi> [4].</span></p>
 <p><a id="refheading6290511854047529"></a></p>
 <h2 id="104">10.4. <span style="color: #4f81bd">الاختبار على جهاز محمول</span></h2>
 <p><span style="color: #000000">لاختبار التطبيق على جهاز محمول، اتبع الخطوات الموضحة في </span><a href="#tests-avec-vrai-smartphone"><u><span style="color: #0563c1">القسم 8.5.6</span></u></a><span style="color: #000000">. فيما يلي بعض لقطات الشاشة للتطبيق:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059B0000097C3912D09A.jpg" width="287" height="485" style="display:inline-block; margin:4px;width:7.59cm;height:12.843cm;" class="odt-zoomable" data-zoom-src="images/100000000000059B0000097C3912D09A.jpg" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D40000097B0617DC08.jpg" width="299" height="486" style="display:inline-block; margin:4px;width:7.9cm;height:12.852cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D40000097B0617DC08.jpg" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000059B0000097C3912D09A.jpg" width="287" height="485" style="display:inline-block; margin:4px;width:7.59cm;height:12.843cm;" class="odt-zoomable" data-zoom-src="images/100000000000059B0000097C3912D09A.jpg" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005D40000097B0617DC08.jpg" width="299" height="486" style="display:inline-block; margin:4px;width:7.9cm;height:12.852cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D40000097B0617DC08.jpg" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000607000009B4A299E3EF.jpg" width="309" height="497" style="display:inline-block; margin:4px;width:8.17cm;height:13.152cm;" class="odt-zoomable" data-zoom-src="images/1000000000000607000009B4A299E3EF.jpg" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005B0000009757E64FA99.jpg" width="291" height="484" style="display:inline-block; margin:4px;width:7.699cm;height:12.802cm;" class="odt-zoomable" data-zoom-src="images/10000000000005B0000009757E64FA99.jpg" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000607000009B4A299E3EF.jpg" width="309" height="497" style="display:inline-block; margin:4px;width:8.17cm;height:13.152cm;" class="odt-zoomable" data-zoom-src="images/1000000000000607000009B4A299E3EF.jpg" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005B0000009757E64FA99.jpg" width="291" height="484" style="display:inline-block; margin:4px;width:7.699cm;height:12.802cm;" class="odt-zoomable" data-zoom-src="images/10000000000005B0000009757E64FA99.jpg" /></td></tr></table>
 
 
 

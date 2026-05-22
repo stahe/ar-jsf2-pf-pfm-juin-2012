@@ -911,7 +911,7 @@
 <p><a id="refheading7741030114625"></a></p>
 <h1 id="4-02-rdvmedecins-jsf2-spring">4. <span style="color: #365f91">تطبيق نموذجي – 02: <bdi dir="ltr" class="odt-ltr-term">rdvmedecins-jsf2-spring</bdi></span></h1>
 <p>سنقوم الآن بنقل التطبيق السابق إلى بيئة <bdi dir="ltr" class="odt-ltr-term">Spring/Tomcat:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F10000011AC917007A.png" width="633" height="141" style="display:inline-block; margin:4px;width:16.736cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F10000011AC917007A.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F10000011AC917007A.png" width="633" height="141" style="display:inline-block; margin:4px;width:16.736cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F10000011AC917007A.png" /></td></tr></table>
 
 <p>هذا هو بالفعل عملية تكييف. سنبدأ بالتطبيق السابق ونقوم بتكييفه مع البيئة الجديدة. وسنكتفي بالتعليق على التغييرات فقط. وهناك ثلاثة تغييرات رئيسية:</p>
 <ul>
@@ -924,19 +924,19 @@
 </ul>
 
 <p>نظرًا لأننا سنقوم بالكثير من عمليات النسخ واللصق بين المشاريع القديمة والجديدة، سنبقي المشاريع السابقة مفتوحة في <bdi dir="ltr" class="odt-ltr-term">NetBeans:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE000000736E7F2A8E.png" width="167" height="81" style="display:inline-block; margin:4px;width:4.41cm;height:2.131cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EE000000736E7F2A8E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000EE000000736E7F2A8E.png" width="167" height="81" style="display:inline-block; margin:4px;width:4.41cm;height:2.131cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EE000000736E7F2A8E.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>يتطلب استخدام إطار عمل <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> معرفة معينة، يمكن العثور عليها في [<strong>المرجع 7</strong>] (انظر <a href="#references-2"><u><span style="color: #0563c1">الصفحة 166</span></u></a>).</p>
 <p><a id="refheading7741230114625"></a></p>
 <h2 id="41-dao-jpa">4.1. <span style="color: #4f81bd">طبقات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>]</span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F10000011A8D28B2AC.png" width="633" height="141" style="display:inline-block; margin:4px;width:16.736cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F10000011A8D28B2AC.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F10000011A8D28B2AC.png" width="633" height="141" style="display:inline-block; margin:4px;width:16.736cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F10000011A8D28B2AC.png" /></td></tr></table>
 
 <p><a id="refheading7741430114625"></a></p>
 <h3 id="411-netbeans">4.1.1. <span style="color: #4f81bd"><span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></span></h3>
 <p>نحن نقوم بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> من نوع [تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C80000006A69281A45.png" width="140" height="74" style="display:inline-block; margin:4px;width:3.701cm;height:1.961cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C80000006A69281A45.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B000000999D9E79A3.png" width="243" height="107" style="display:inline-block; margin:4px;width:6.429cm;height:2.835cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B000000999D9E79A3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000110000000ED402F07D8.png" width="190" height="166" style="display:inline-block; margin:4px;width:5.039cm;height:4.39cm;" class="odt-zoomable" data-zoom-src="images/1000000000000110000000ED402F07D8.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000C80000006A69281A45.png" width="140" height="74" style="display:inline-block; margin:4px;width:3.701cm;height:1.961cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C80000006A69281A45.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000015B000000999D9E79A3.png" width="243" height="107" style="display:inline-block; margin:4px;width:6.429cm;height:2.835cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B000000999D9E79A3.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000110000000ED402F07D8.png" width="190" height="166" style="display:inline-block; margin:4px;width:5.039cm;height:4.39cm;" class="odt-zoomable" data-zoom-src="images/1000000000000110000000ED402F07D8.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000330000001852F53B8DC.png" width="408" height="194" style="display:inline-block; margin:4px;width:10.795cm;height:5.145cm;" class="odt-zoomable" data-zoom-src="images/1000000000000330000001852F53B8DC.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000330000001852F53B8DC.png" width="408" height="194" style="display:inline-block; margin:4px;width:10.795cm;height:5.145cm;" class="odt-zoomable" data-zoom-src="images/1000000000000330000001852F53B8DC.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، المشروع الذي تم إنشاؤه،
@@ -945,7 +945,7 @@
   </li>
 </ul>
 
-<p>أصعب جزء في مشاريع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> هو العثور على التبعيات الصحيحة. بالنسبة لمشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> / <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> هذا، فهي كما يلي:</p>
+<p>أصعب جزء في مشاريع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> هو العثور على التبعيات الصحيحة. بالنسبة لمشروع <bdi dir="ltr" class="odt-ltr-term">Spring / JPA / Hibernate</bdi> هذا، فهي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -1041,7 +1041,7 @@
 </ul>
 
 <p>دعونا نضيف هذه التبعيات ونبني المشروع:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000031E00000180595F3A74.png" width="399" height="192" style="display:inline-block; margin:4px;width:10.557cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/100000000000031E00000180595F3A74.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000031E00000180595F3A74.png" width="399" height="192" style="display:inline-block; margin:4px;width:10.557cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/100000000000031E00000180595F3A74.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، نقوم ببناء المشروع، مما سيجبر <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> على تنزيل التبعيات؛
@@ -1051,7 +1051,7 @@
 </ul>
 
 <p>الآن بعد أن أصبح لدينا التبعيات، نلصق كود مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> من طبقة [dao] في مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في طبقة [dao]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B60000013CD8A7F7BE.png" width="603" height="158" style="display:inline-block; margin:4px;width:15.954cm;height:4.18cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B60000013CD8A7F7BE.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004B60000013CD8A7F7BE.png" width="603" height="158" style="display:inline-block; margin:4px;width:15.954cm;height:4.18cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B60000013CD8A7F7BE.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، ننسخ إلى مشروع المصدر،
@@ -1065,12 +1065,12 @@
 <p>بمجرد اكتمال النسخ، تحتاج إلى إصلاح الأخطاء.</p>
 <p><a id="refheading7741630114625"></a></p>
 <h3 id="412-exceptions">4.1.2. <span style="color: #4f81bd">حزمة [<bdi dir="ltr" class="odt-ltr-term">exceptions</bdi>]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E70000016CE2B22EDD.png" width="628" height="182" style="display:inline-block; margin:4px;width:16.603cm;height:4.815cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E70000016CE2B22EDD.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E70000016CE2B22EDD.png" width="628" height="182" style="display:inline-block; margin:4px;width:16.603cm;height:4.815cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E70000016CE2B22EDD.png" /></td></tr></table>
 
 <p>تحتوي فئة [<bdi dir="ltr" class="odt-ltr-term">RdvMedecinsExceptions</bdi>] [1] على أخطاء لأن حزمة [<bdi dir="ltr" class="odt-ltr-term">javax</bdi>] في السطر 4 لم تعد موجودة. هذه حزمة خاصة بـ <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> ينشأ الخطأ في السطر 6 عن الخطأ الموجود في السطر 4. نقوم بحذف هذين السطرين. وهذا يحل الأخطاء [2].</p>
 <p><a id="refheading7741830114625"></a></p>
 <h3 id="413-jpa">4.1.3. <span style="color: #4f81bd">حزمة [jpa]</span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CA0000026A98808703.png" width="613" height="309" style="display:inline-block; margin:4px;width:16.219cm;height:8.176cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CA0000026A98808703.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004CA0000026A98808703.png" width="613" height="309" style="display:inline-block; margin:4px;width:16.219cm;height:8.176cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CA0000026A98808703.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، الفئة [<bdi dir="ltr" class="odt-ltr-term">Creneau</bdi>] غير صحيحة بسبب عدم وجود حزمة التحقق من الصحة في السطر [5]. كان بإمكاننا إضافة هذه الحزمة إلى تبعيات المشروع. ومع ذلك، أثناء الاختبار، يرمي <bdi dir="ltr" class="odt-ltr-term">Hibernate</bdi> استثناءً بسببها. وبما أنها ليست ضرورية لتطبيقنا، فقد قمنا بإزالتها. لإصلاح الفئة، ما عليك سوى حذف جميع الأسطر غير الصحيحة [2]. نقوم بذلك لجميع الفئات غير الصحيحة.
@@ -1080,7 +1080,7 @@
 <p><a id="refheading7742030114625"></a></p>
 <h3 id="414-dao">4.1.4. <span style="color: #4f81bd">حزمة [dao]</span></h3>
 <p>نحن الآن في النقطة التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DC0000010714869FD8.png" width="366" height="131" style="display:inline-block; margin:4px;width:9.684cm;height:3.478cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DC0000010714869FD8.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002DC0000010714869FD8.png" width="366" height="131" style="display:inline-block; margin:4px;width:9.684cm;height:3.478cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DC0000010714869FD8.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، الحزمتان المصححتان،
@@ -1089,7 +1089,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003740000022BCC80A005.png" width="442" height="277" style="display:inline-block; margin:4px;width:11.695cm;height:7.341cm;" class="odt-zoomable" data-zoom-src="images/10000000000003740000022BCC80A005.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003740000022BCC80A005.png" width="442" height="277" style="display:inline-block; margin:4px;width:11.695cm;height:7.341cm;" class="odt-zoomable" data-zoom-src="images/10000000000003740000022BCC80A005.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، للأخطاء الموجودة في فئة [<bdi dir="ltr" class="odt-ltr-term">DaoJpa</bdi>] سببان:
@@ -1101,17 +1101,17 @@
 </ul>
 
 <p>نقوم بإزالة الأسطر الخاطئة ونستخدم واجهة [<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>] بدلاً من الواجهات المحلية والبعيدة [2].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B600000205C2A09165.png" width="347" height="258" style="display:inline-block; margin:4px;width:9.181cm;height:6.839cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B600000205C2A09165.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002B600000205C2A09165.png" width="347" height="258" style="display:inline-block; margin:4px;width:9.181cm;height:6.839cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B600000205C2A09165.png" /></td></tr></table>
 
 <p>في مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>، كانت فئة [<bdi dir="ltr" class="odt-ltr-term">DaoJpa</bdi>] فئة فردية، وكانت طرقها تعمل ضمن معاملة. سنرى أن فئة [<bdi dir="ltr" class="odt-ltr-term">DaoJpa</bdi>] ستكون حبة يديرها <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> بشكل افتراضي، كل حبة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> هي حبة فردية. وهذا يغطي الخاصية الأولى. أما الثانية فتتحقق باستخدام تعليق <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> <strong>@<bdi dir="ltr" class="odt-ltr-term">Transactional</bdi></strong> [3]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C9000001E7DEF4C63A.png" width="613" height="244" style="display:inline-block; margin:4px;width:16.207cm;height:6.443cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C9000001E7DEF4C63A.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C9000001E7DEF4C63A.png" width="613" height="244" style="display:inline-block; margin:4px;width:16.207cm;height:6.443cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C9000001E7DEF4C63A.png" /></td></tr></table>
 
 <p>وبذلك، لم يعد المشروع يحتوي على أي أخطاء [4].</p>
 <p><a id="refheading7742230114625"></a></p>
 <h3 id="415-jpa">4.1.5. <span style="color: #4f81bd">تكوين طبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>]</span></h3>
 <p>في مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>، قمنا بتكوين طبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] باستخدام ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>]. هنا لدينا طبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>]، لذا نحتاج إلى إنشاء هذا الملف. في مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>، قمنا بإنشائه باستخدام <bdi dir="ltr" class="odt-ltr-term">GlassFish.</bdi> هنا، نقوم بإنشائه يدويًا. السبب الرئيسي لذلك هو أن جزءًا من التكوين من ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>] يتم ترحيله إلى ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> نفسه.</p>
 <p>نقوم بإنشاء ملف [<bdi dir="ltr" class="odt-ltr-term">persistence.xml</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017A000000DD2CC08CFB.png" width="189" height="111" style="display:inline-block; margin:4px;width:5.001cm;height:2.925cm;" class="odt-zoomable" data-zoom-src="images/100000000000017A000000DD2CC08CFB.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000017A000000DD2CC08CFB.png" width="189" height="111" style="display:inline-block; margin:4px;width:5.001cm;height:2.925cm;" class="odt-zoomable" data-zoom-src="images/100000000000017A000000DD2CC08CFB.png" /></td></tr></table>
 
 <p>بالمحتوى التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -1139,7 +1139,7 @@
 <p><a id="refheading7742430114625"></a></p>
 <h3 id="416-spring">4.1.6. <span style="color: #4f81bd">ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi></span></h3>
 <p>ذكرنا أن فئة [<bdi dir="ltr" class="odt-ltr-term">DaoJpa</bdi>] هي حبة يديرها <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> ويتم ذلك عبر ملف تكوين. سيحتوي هذا الملف أيضًا على تكوين الوصول إلى قاعدة البيانات بالإضافة إلى إدارة المعاملات. يجب أن يكون موجودًا في مسار <em><bdi dir="ltr" class="odt-ltr-term">ClassPath</bdi></em> الخاص بالمشروع. نضعه في مجلد [<bdi dir="ltr" class="odt-ltr-term">Other sources</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000163000000F58EFFF5A9.png" width="178" height="123" style="display:inline-block; margin:4px;width:4.697cm;height:3.242cm;" class="odt-zoomable" data-zoom-src="images/1000000000000163000000F58EFFF5A9.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000163000000F58EFFF5A9.png" width="178" height="123" style="display:inline-block; margin:4px;width:4.697cm;height:3.242cm;" class="odt-zoomable" data-zoom-src="images/1000000000000163000000F58EFFF5A9.png" /></td></tr></table>
 
 <p>ملف [<bdi dir="ltr" class="odt-ltr-term">spring-config-dao.xml</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -1241,7 +1241,7 @@
 <p>عند تشغيل الكود، سيتم إنشاء مثيلات لجميع الفاصوليا الموجودة في ملف التكوين. سنرى كيف.</p>
 <p><a id="refheading7742630114625"></a></p>
 <h3 id="417-junit">4.1.7. <span style="color: #4f81bd">فئة اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit</bdi></span></h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BD000001394D523E7C.png" width="607" height="157" style="display:inline-block; margin:4px;width:16.048cm;height:4.142cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BD000001394D523E7C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004BD000001394D523E7C.png" width="607" height="157" style="display:inline-block; margin:4px;width:16.048cm;height:4.142cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BD000001394D523E7C.png" /></td></tr></table>
 
 <p>لقد اختبرنا طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] في مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> باستخدام اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit.</bdi> وسنفعل الشيء نفسه لطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] في مشروع <bdi dir="ltr" class="odt-ltr-term">Spring:</bdi></p>
 <ul>
@@ -1251,10 +1251,10 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000031E000003110062CA5D.png" width="399" height="393" style="display:inline-block; margin:4px;width:10.557cm;height:10.386cm;" class="odt-zoomable" data-zoom-src="images/100000000000031E000003110062CA5D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000031E000003110062CA5D.png" width="399" height="393" style="display:inline-block; margin:4px;width:10.557cm;height:10.386cm;" class="odt-zoomable" data-zoom-src="images/100000000000031E000003110062CA5D.png" /></td></tr></table>
 
 <p>الخطأ المبلغ عنه في [1] هو أن الواجهة البعيدة لـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> لم تعد موجودة. علاوة على ذلك، كان كود التهيئة لحقل [dao] في السطر 19 عبارة عن استدعاء <bdi dir="ltr" class="odt-ltr-term">JNDI</bdi> خاص بـ <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> (الأسطر 25–28). لإنشاء مثيل لحقل [dao] في السطر 19، نحتاج إلى استخدام ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> ويتم ذلك على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000044A000002E3E3516C63.png" width="549" height="370" style="display:inline-block; margin:4px;width:14.526cm;height:9.777cm;" class="odt-zoomable" data-zoom-src="images/100000000000044A000002E3E3516C63.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000044A000002E3E3516C63.png" width="549" height="370" style="display:inline-block; margin:4px;width:14.526cm;height:9.777cm;" class="odt-zoomable" data-zoom-src="images/100000000000044A000002E3E3516C63.png" /></td></tr></table>
 
 <ul>
   <li>السطر 21: أصبح نوع الواجهة [<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]،
@@ -1273,11 +1273,11 @@
 </ul>
 
 <p>تقوم السطور 28-29 بإنشاء الكتل التالية (الخطوط المنقطة باللون الوردي):</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000040C000000BACF0DB68A.png" width="518" height="93" style="display:inline-block; margin:4px;width:13.705cm;height:2.461cm;" class="odt-zoomable" data-zoom-src="images/100000000000040C000000BACF0DB68A.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000040C000000BACF0DB68A.png" width="518" height="93" style="display:inline-block; margin:4px;width:13.705cm;height:2.461cm;" class="odt-zoomable" data-zoom-src="images/100000000000040C000000BACF0DB68A.png" /></td></tr></table>
 
 <p>عند تشغيل اختبارات عميل <bdi dir="ltr" class="odt-ltr-term">JUnit</bdi>، تكون طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] قد تم إنشاء مثيل لها. وبالتالي يمكننا اختبار أساليبها. لاحظ أنه لا يلزم وجود خادم لتشغيل هذا الاختبار، على عكس اختبار <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] الذي كان يتطلب خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish.</bdi> هنا، يتم تشغيل كل شيء داخل نفس <bdi dir="ltr" class="odt-ltr-term">JVM.</bdi></p>
 <p>يمكننا الآن تشغيل اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit.</bdi> يجب أن يكون خادم <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> قيد التشغيل. النتائج هي كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CF000001E864B80977.png" width="488" height="244" style="display:inline-block; margin:4px;width:12.899cm;height:6.456cm;" class="odt-zoomable" data-zoom-src="images/10000000000003CF000001E864B80977.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003CF000001E864B80977.png" width="488" height="244" style="display:inline-block; margin:4px;width:12.899cm;height:6.456cm;" class="odt-zoomable" data-zoom-src="images/10000000000003CF000001E864B80977.png" /></td></tr></table>
 
 <p>اجتاز اختبار <bdi dir="ltr" class="odt-ltr-term">JUnit.</bdi> دعونا نفحص سجلات الاختبار كما فعلنا أثناء اختبار <bdi dir="ltr" class="odt-ltr-term">EJB:</bdi></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -1440,21 +1440,21 @@
 <p>طبقة [dao] جاهزة للعمل. سنقوم الآن ببناء طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>].</p>
 <p><a id="refheading7742830114625"></a></p>
 <h2 id="42-business">4.2. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F40000010FBF9685C2.png" width="634" height="135" style="display:inline-block; margin:4px;width:16.775cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F40000010FBF9685C2.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F40000010FBF9685C2.png" width="634" height="135" style="display:inline-block; margin:4px;width:16.775cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F40000010FBF9685C2.png" /></td></tr></table>
 
 <p>نقوم بنفس الطريقة المتبعة في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]، عن طريق النسخ واللصق من مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> إلى مشروع <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi></p>
 <p><a id="refheading7743030114625"></a></p>
 <h3 id="421-netbeans">4.2.1. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></h3>
 <p>نحن بصدد إنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> جديد من نوع [تطبيق <bdi dir="ltr" class="odt-ltr-term">Java</bdi>]، بعد حذف كل ما لا نرغب في الاحتفاظ به [1]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000013DF4AEE2CE.png" width="177" height="159" style="display:inline-block; margin:4px;width:4.671cm;height:4.195cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000013DF4AEE2CE.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001610000013DF4AEE2CE.png" width="177" height="159" style="display:inline-block; margin:4px;width:4.671cm;height:4.195cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000013DF4AEE2CE.png" /></td></tr></table>
 
 <p><a id="refheading7743230114625"></a></p>
 <h3 id="422">4.2.2. <span style="color: #4f81bd">تبعيات المشروع</span></h3>
 <p>في البنية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F20000011A0FACAC92.png" width="633" height="141" style="display:inline-block; margin:4px;width:16.748cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F20000011A0FACAC92.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F20000011A0FACAC92.png" width="633" height="141" style="display:inline-block; margin:4px;width:16.748cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F20000011A0FACAC92.png" /></td></tr></table>
 
 <p>تعتمد طبقة [الأعمال] على طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. لذلك نضيف تبعية للمشروع السابق:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000519000001B78CDF0713.png" width="653" height="220" style="display:inline-block; margin:4px;width:17.265cm;height:5.808cm;" class="odt-zoomable" data-zoom-src="images/1000000000000519000001B78CDF0713.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000519000001B78CDF0713.png" width="653" height="220" style="display:inline-block; margin:4px;width:17.265cm;height:5.808cm;" class="odt-zoomable" data-zoom-src="images/1000000000000519000001B78CDF0713.png" /></td></tr></table>
 
 <ul>
   <li>في [1] و[2]، نضيف تبعية لمشروع طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]؛
@@ -1463,7 +1463,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CD00000118DAD1F9A7.png" width="615" height="140" style="display:inline-block; margin:4px;width:16.26cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CD00000118DAD1F9A7.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004CD00000118DAD1F9A7.png" width="615" height="140" style="display:inline-block; margin:4px;width:16.26cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CD00000118DAD1F9A7.png" /></td></tr></table>
 
 <ul>
   <li>في [1] و[2]، نقوم بنسخ مصادر <bdi dir="ltr" class="odt-ltr-term">Java</bdi> من مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> إلى مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>،
@@ -1473,7 +1473,7 @@
 </ul>
 
 <p>نبدأ بإزالة الواجهات البعيدة والمحلية من طبقة [الأعمال] التي لم تعد موجودة [4]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F6000002E23BD9EE02.png" width="635" height="369" style="display:inline-block; margin:4px;width:16.801cm;height:9.763cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F6000002E23BD9EE02.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F6000002E23BD9EE02.png" width="635" height="369" style="display:inline-block; margin:4px;width:16.801cm;height:9.763cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F6000002E23BD9EE02.png" /></td></tr></table>
 
 <ul>
   <li>في [5]، تعود الأخطاء في فئة [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>] إلى عدة أسباب:
@@ -1498,7 +1498,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CB0000022A9D6B2173.png" width="614" height="277" style="display:inline-block; margin:4px;width:16.233cm;height:7.329cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CB0000022A9D6B2173.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004CB0000022A9D6B2173.png" width="614" height="277" style="display:inline-block; margin:4px;width:16.233cm;height:7.329cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CB0000022A9D6B2173.png" /></td></tr></table>
 
 <ul>
   <li>في [6]، بعد تصحيح الفئة كما هو موضح،
@@ -1508,25 +1508,25 @@
 </ul>
 
 <p>لقد أزلنا الإشارات إلى <bdi dir="ltr" class="odt-ltr-term">EJBs</bdi>، ولكننا نحتاج الآن إلى استرداد خصائصها:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000293000000CAE9037AD8.png" width="461" height="141" style="display:inline-block; margin:4px;width:12.201cm;height:3.739cm;" class="odt-zoomable" data-zoom-src="images/1000000000000293000000CAE9037AD8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000293000000CAE9037AD8.png" width="461" height="141" style="display:inline-block; margin:4px;width:12.201cm;height:3.739cm;" class="odt-zoomable" data-zoom-src="images/1000000000000293000000CAE9037AD8.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <ul>
   <li>السطر 22: كان لدينا عنصر فريد. سيتم تحقيق هذا السلوك بجعل الفئة حبة مُدارة بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring</bdi>،
   </li>
-  <li>السطر 23: تم تشغيل كل طريقة ضمن معاملة. سيتم تحقيق ذلك باستخدام تعليق <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> @<bdi dir="ltr" class="odt-ltr-term">Transactional</bdi>،
+  <li>السطر 23: تم تشغيل كل طريقة ضمن معاملة. سيتم تحقيق ذلك باستخدام تعليق <bdi dir="ltr" class="odt-ltr-term">Spring @Transactional</bdi>،
   </li>
   <li>السطران 27–28: تم الحصول على المرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] عبر حقن حاوية <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi> سنستخدم حقن <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi>
   </li>
 </ul>
 
 <p>وبالتالي، يتطور كود فئة [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] في مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035C00000245E0BB035A.png" width="430" height="290" style="display:inline-block; margin:4px;width:11.377cm;height:7.685cm;" class="odt-zoomable" data-zoom-src="images/100000000000035C00000245E0BB035A.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000035C00000245E0BB035A.png" width="430" height="290" style="display:inline-block; margin:4px;width:11.377cm;height:7.685cm;" class="odt-zoomable" data-zoom-src="images/100000000000035C00000245E0BB035A.png" /></td></tr></table>
 
 <p>هذا كل شيء بالنسبة لرمز <bdi dir="ltr" class="odt-ltr-term">Java.</bdi> أما الباقي فيتم في ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi></p>
 <p><a id="refheading7743430114625"></a></p>
 <h3 id="423-spring">4.2.3. <span style="color: #4f81bd">ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi></span></h3>
 <p>نقوم بنسخ ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> من مشروع طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] إلى مشروع طبقة [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]. نبدأ بإنشاء فرع [<bdi dir="ltr" class="odt-ltr-term">Other Resources</bdi>] في مشروع طبقة [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>] إذا لم يكن موجودًا:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004CB000000EBA95F3476.png" width="614" height="118" style="display:inline-block; margin:4px;width:16.233cm;height:3.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CB000000EBA95F3476.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004CB000000EBA95F3476.png" width="614" height="118" style="display:inline-block; margin:4px;width:16.233cm;height:3.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000004CB000000EBA95F3476.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Files</bdi>]، قم بإنشاء مجلد فرعي تحت المجلد [<bdi dir="ltr" class="odt-ltr-term">main</bdi>]،
@@ -1538,7 +1538,7 @@
 </ul>
 
 <p>يمكننا الآن نسخ ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> ولصقه:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F4000001A6EF9F586A.png" width="634" height="211" style="display:inline-block; margin:4px;width:16.775cm;height:5.583cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F4000001A6EF9F586A.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F4000001A6EF9F586A.png" width="634" height="211" style="display:inline-block; margin:4px;width:16.775cm;height:5.583cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F4000001A6EF9F586A.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، انسخ الملف من مشروع [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] [2]،
@@ -1627,16 +1627,16 @@
 </code></pre></div>
 
 <p>نقوم بإعادة تسمية ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لتعكس التغييرات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000186000000DA12614E24.png" width="195" height="109" style="display:inline-block; margin:4px;width:5.159cm;height:2.884cm;" class="odt-zoomable" data-zoom-src="images/1000000000000186000000DA12614E24.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000186000000DA12614E24.png" width="195" height="109" style="display:inline-block; margin:4px;width:5.159cm;height:2.884cm;" class="odt-zoomable" data-zoom-src="images/1000000000000186000000DA12614E24.png" /></td></tr></table>
 
 <p>نحن الآن جاهزون لإجراء اختبار. سنستخدم اختبار وحدة التحكم المستخدم لاختبار <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>].</p>
 <p><a id="refheading7743630114625"></a></p>
 <h3 id="424">4.2.4. <span style="color: #4f81bd">اختبار طبقة [الأعمال]</span></h3>
 <p>سيتم إجراء الاختبار باستخدام البنية التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B1000000BE39513B73.png" width="601" height="95" style="display:inline-block; margin:4px;width:15.889cm;height:2.514cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B1000000BE39513B73.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004B1000000BE39513B73.png" width="601" height="95" style="display:inline-block; margin:4px;width:15.889cm;height:2.514cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B1000000BE39513B73.png" /></td></tr></table>
 
 <p>نقوم بنسخ اختبار وحدة التحكم من مشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi> إلى مشروع <bdi dir="ltr" class="odt-ltr-term">Spring:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048600000133CA492045.png" width="579" height="153" style="display:inline-block; margin:4px;width:15.319cm;height:4.06cm;" class="odt-zoomable" data-zoom-src="images/100000000000048600000133CA492045.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000048600000133CA492045.png" width="579" height="153" style="display:inline-block; margin:4px;width:15.319cm;height:4.06cm;" class="odt-zoomable" data-zoom-src="images/100000000000048600000133CA492045.png" /></td></tr></table>
 
 <ul>
   <li>في [1] و[2]، قم بالنسخ واللصق بين المشروعين؛
@@ -1645,7 +1645,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D10000020EE05450D1.png" width="505" height="368" style="display:inline-block; margin:4px;width:13.351cm;height:9.74cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D10000020EE05450D1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002D10000020EE05450D1.png" width="505" height="368" style="display:inline-block; margin:4px;width:13.351cm;height:9.74cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D10000020EE05450D1.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>يحتوي الكود المستورد على نوعين من الأخطاء:</p>
 <ul>
@@ -1656,7 +1656,7 @@
 </ul>
 
 <p>نقوم بتصحيح هاتين المشكلتين:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000494000002F1D3088508.png" width="586" height="377" style="display:inline-block; margin:4px;width:15.505cm;height:9.962cm;" class="odt-zoomable" data-zoom-src="images/1000000000000494000002F1D3088508.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000494000002F1D3088508.png" width="586" height="377" style="display:inline-block; margin:4px;width:15.505cm;height:9.962cm;" class="odt-zoomable" data-zoom-src="images/1000000000000494000002F1D3088508.png" /></td></tr></table>
 
 <ul>
   <li>السطر 22: يتم استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">spring-config-metier-dao.xml</bdi>]. ثم يتم إنشاء مثيلات لجميع الفاصوليا في هذا الملف. ومن بينها ما يلي:
@@ -1672,10 +1672,10 @@
 </code></pre></div>
 
 <p>يمثل هذان العنصران طبقتي [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">business</bdi>] في بنية الاختبار:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FA000000AA288CFF7D.png" width="637" height="85" style="display:inline-block; margin:4px;width:16.854cm;height:2.249cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FA000000AA288CFF7D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004FA000000AA288CFF7D.png" width="637" height="85" style="display:inline-block; margin:4px;width:16.854cm;height:2.249cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FA000000AA288CFF7D.png" /></td></tr></table>
 
 <p>بمجرد الانتهاء من ذلك، يمكن تشغيل الاختبار:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FB000000F010E380F8.png" width="176" height="168" style="display:inline-block; margin:4px;width:4.65cm;height:4.447cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FB000000F010E380F8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000FB000000F010E380F8.png" width="176" height="168" style="display:inline-block; margin:4px;width:4.65cm;height:4.447cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FB000000F010E380F8.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>سجلات الاختبار هي كما يلي:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
@@ -1796,13 +1796,13 @@
 <p>لقد أنشأنا الطبقة [الأعمال]. ننتقل الآن إلى الطبقة الأخيرة، وهي الطبقة [الويب].</p>
 <p><a id="refheading7743830114625"></a></p>
 <h2 id="43">4.3. <span style="color: #4f81bd">طبقة [الويب]</span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FA00000121520DCF9D.png" width="637" height="144" style="display:inline-block; margin:4px;width:16.854cm;height:3.822cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FA00000121520DCF9D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004FA00000121520DCF9D.png" width="637" height="144" style="display:inline-block; margin:4px;width:16.854cm;height:3.822cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FA00000121520DCF9D.png" /></td></tr></table>
 
 <p>لبناء طبقة [الويب]، سنمضي بنفس الطريقة المتبعة مع الطبقتين الأخريين، عن طريق النسخ واللصق من طبقة [الويب] في مشروع <bdi dir="ltr" class="odt-ltr-term">EJB.</bdi></p>
 <p><a id="refheading7744030114625"></a></p>
 <h3 id="431-netbeans">4.3.1. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></h3>
 <p>أولاً، نقوم بإنشاء مشروع ويب:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050E000001799C3E3475.png" width="647" height="189" style="display:inline-block; margin:4px;width:17.119cm;height:4.988cm;" class="odt-zoomable" data-zoom-src="images/100000000000050E000001799C3E3475.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000050E000001799C3E3475.png" width="647" height="189" style="display:inline-block; margin:4px;width:17.119cm;height:4.988cm;" class="odt-zoomable" data-zoom-src="images/100000000000050E000001799C3E3475.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، قم بإنشاء مشروع جديد،
@@ -1813,7 +1813,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DE0000012126C675BC.png" width="623" height="144" style="display:inline-block; margin:4px;width:16.484cm;height:3.822cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DE0000012126C675BC.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004DE0000012126C675BC.png" width="623" height="144" style="display:inline-block; margin:4px;width:16.484cm;height:3.822cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DE0000012126C675BC.png" /></td></tr></table>
 
 <ul>
   <li>في [4]، نختار هذه المرة خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> بدلاً من <bdi dir="ltr" class="odt-ltr-term">GlassFish</bdi>، الذي تم استخدامه لمشروع <bdi dir="ltr" class="odt-ltr-term">EJB</bdi>،
@@ -1827,20 +1827,20 @@
 <p><a id="refheading7744230114625"></a></p>
 <h3 id="432">4.3.2. <span style="color: #4f81bd">تبعيات المشروع</span></h3>
 <p>دعونا نلقي نظرة على بنية المشروع:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DE0000011664182297.png" width="623" height="139" style="display:inline-block; margin:4px;width:16.484cm;height:3.678cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DE0000011664182297.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004DE0000011664182297.png" width="623" height="139" style="display:inline-block; margin:4px;width:16.484cm;height:3.678cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DE0000011664182297.png" /></td></tr></table>
 
 <p>تعتمد طبقة [الويب] على طبقات [الأعمال] و[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>]. وهذه الطبقات جزء من المشروعين اللذين أنشأناهما للتو. ومن ثم، هناك تبعية لكل من هذين المشروعين:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003710000021BCDDAC4BF.png" width="441" height="270" style="display:inline-block; margin:4px;width:11.656cm;height:7.131cm;" class="odt-zoomable" data-zoom-src="images/10000000000003710000021BCDDAC4BF.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003710000021BCDDAC4BF.png" width="441" height="270" style="display:inline-block; margin:4px;width:11.656cm;height:7.131cm;" class="odt-zoomable" data-zoom-src="images/10000000000003710000021BCDDAC4BF.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، نضيف التبعية لمشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">business</bdi>،
+  <li>في [1]، نضيف التبعية لمشروع <bdi dir="ltr" class="odt-ltr-term">Spring / business</bdi>،
   </li>
-  <li>في [2]، تمت إضافة مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">business.</bdi> ونظرًا لأنه كان يعتمد بدوره على مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">DAO</bdi> / <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>، فقد تمت إضافة هذا المشروع تلقائيًا إلى التبعيات [3].
+  <li>في [2]، تمت إضافة مشروع <bdi dir="ltr" class="odt-ltr-term">Spring / business.</bdi> ونظرًا لأنه كان يعتمد بدوره على مشروع <bdi dir="ltr" class="odt-ltr-term">Spring / DAO / JPA</bdi>، فقد تمت إضافة هذا المشروع تلقائيًا إلى التبعيات [3].
   </li>
 </ul>
 
 <p>لنعد إلى بنية تطبيقنا:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F40000011A4032CB74.png" width="634" height="141" style="display:inline-block; margin:4px;width:16.775cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F40000011A4032CB74.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F40000011A4032CB74.png" width="634" height="141" style="display:inline-block; margin:4px;width:16.775cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F40000011A4032CB74.png" /></td></tr></table>
 
 <p>طبقة الويب هي طبقة <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi> لذلك نحتاج إلى مكتبات <bdi dir="ltr" class="odt-ltr-term">Java Server Faces.</bdi> خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> لا يحتوي عليها. وبالتالي، لن يكون نطاق التبعية [<bdi dir="ltr" class="odt-ltr-term">provided</bdi>]، كما كان الحال مع خادم <bdi dir="ltr" class="odt-ltr-term">Glassfish</bdi>، بل سيكون نطاق [<bdi dir="ltr" class="odt-ltr-term">compile</bdi>]، وهو النطاق الافتراضي عندما لا يتم تحديد نطاق.</p>
 <p>نضيف هذه التبعيات مباشرة في ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>]:</p>
@@ -1879,21 +1879,21 @@
 <p><a id="refheading7744430114625"></a></p>
 <h3 id="433-jsfglassfish-jsftomcat">4.3.3. <span style="color: #4f81bd">نقل مشروع <bdi dir="ltr" class="odt-ltr-term">JSF/Glassfish</bdi> إلى مشروع <bdi dir="ltr" class="odt-ltr-term">JSF/Tomcat</bdi></span></h3>
 <p>نقوم بنسخ كل الكود من مشروع <bdi dir="ltr" class="odt-ltr-term">JSF/Glassfish</bdi> إلى مشروع <bdi dir="ltr" class="odt-ltr-term">JSF/Tomcat:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A50000018F9327086D.png" width="595" height="200" style="display:inline-block; margin:4px;width:15.73cm;height:5.279cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A50000018F9327086D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004A50000018F9327086D.png" width="595" height="200" style="display:inline-block; margin:4px;width:15.73cm;height:5.279cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A50000018F9327086D.png" /></td></tr></table>
 
 <ul>
   <li>[1، 2، 3]: نسخ صفحات الويب من المشروع القديم إلى المشروع الجديد،
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004840000014E7116B41C.png" width="578" height="167" style="display:inline-block; margin:4px;width:15.293cm;height:4.419cm;" class="odt-zoomable" data-zoom-src="images/10000000000004840000014E7116B41C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004840000014E7116B41C.png" width="578" height="167" style="display:inline-block; margin:4px;width:15.293cm;height:4.419cm;" class="odt-zoomable" data-zoom-src="images/10000000000004840000014E7116B41C.png" /></td></tr></table>
 
 <ul>
   <li>[1، 2، 3]: انسخ كود <bdi dir="ltr" class="odt-ltr-term">Java</bdi> من المشروع القديم إلى الجديد. هناك أخطاء. هذا أمر طبيعي. سنقوم بإصلاحها،
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000531000000E697E09756.png" width="665" height="115" style="display:inline-block; margin:4px;width:17.582cm;height:3.043cm;" class="odt-zoomable" data-zoom-src="images/1000000000000531000000E697E09756.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000531000000E697E09756.png" width="665" height="115" style="display:inline-block; margin:4px;width:17.582cm;height:3.043cm;" class="odt-zoomable" data-zoom-src="images/1000000000000531000000E697E09756.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Files</bdi>] في <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>، قم بإنشاء مجلد فرعي [<bdi dir="ltr" class="odt-ltr-term">resources</bdi>] داخل المجلد [<bdi dir="ltr" class="odt-ltr-term">main</bdi>]،
@@ -1902,7 +1902,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C300000165C896217C.png" width="610" height="179" style="display:inline-block; margin:4px;width:16.127cm;height:4.724cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C300000165C896217C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C300000165C896217C.png" width="610" height="179" style="display:inline-block; margin:4px;width:16.127cm;height:4.724cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C300000165C896217C.png" /></td></tr></table>
 
 <ul>
   <li>[1، 2، 3]: انسخ ملفات الرسائل من المشروع القديم إلى المشروع الجديد.
@@ -1912,7 +1912,7 @@
 <p><a id="refheading7744630114625"></a></p>
 <h3 id="434">4.3.4. <span style="color: #4f81bd">التعديلات على المشروع المستورد</span></h3>
 <p>لاحظنا أن كود <bdi dir="ltr" class="odt-ltr-term">Java</bdi> المستورد يحتوي على أخطاء. دعونا نفحصها:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005290000027B00CD0038.png" width="661" height="318" style="display:inline-block; margin:4px;width:17.477cm;height:8.401cm;" class="odt-zoomable" data-zoom-src="images/10000000000005290000027B00CD0038.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005290000027B00CD0038.png" width="661" height="318" style="display:inline-block; margin:4px;width:17.477cm;height:8.401cm;" class="odt-zoomable" data-zoom-src="images/10000000000005290000027B00CD0038.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، فقط حبة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] هي غير صحيحة؛
@@ -1922,12 +1922,12 @@
 </ul>
 
 <p>هنا، لن نستخدم التبعية [<bdi dir="ltr" class="odt-ltr-term">javaee-web-api-6.0</bdi>]. نقوم بإزالتها [1]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003640000010217C5D032.png" width="434" height="129" style="display:inline-block; margin:4px;width:11.483cm;height:3.413cm;" class="odt-zoomable" data-zoom-src="images/10000000000003640000010217C5D032.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003640000010217C5D032.png" width="434" height="129" style="display:inline-block; margin:4px;width:11.483cm;height:3.413cm;" class="odt-zoomable" data-zoom-src="images/10000000000003640000010217C5D032.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D3000000967D226476.png" width="148" height="105" style="display:inline-block; margin:4px;width:3.911cm;height:2.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D3000000967D226476.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000D3000000967D226476.png" width="148" height="105" style="display:inline-block; margin:4px;width:3.911cm;height:2.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D3000000967D226476.png" /></td></tr></table>
 
 <p>وهذا يتسبب في ظهور أخطاء جديدة [2]. لنبدأ بالأخطاء الموجودة في مكون [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051A000002714841DA28.png" width="653" height="312" style="display:inline-block; margin:4px;width:17.277cm;height:8.267cm;" class="odt-zoomable" data-zoom-src="images/100000000000051A000002714841DA28.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000051A000002714841DA28.png" width="653" height="312" style="display:inline-block; margin:4px;width:17.277cm;height:8.267cm;" class="odt-zoomable" data-zoom-src="images/100000000000051A000002714841DA28.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، تتعلق الأسطر الخاطئة بفقدان حزمة [<bdi dir="ltr" class="odt-ltr-term">javax</bdi>]. نقوم بإزالتها جميعًا [2]. جعلت الأسطر الخاطئة فئة [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>] حبة ذات نطاق جلسة (الأسطر 18–20 من [1]). بالإضافة إلى ذلك، تم حقن حبة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] في السطر 25. سيتم نقل هذه المعلومات إلى ملف تكوين <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> [<bdi dir="ltr" class="odt-ltr-term">faces-config.xml</bdi>].
@@ -1935,17 +1935,17 @@
 </ul>
 
 <p>لننتقل إلى <bdi dir="ltr" class="odt-ltr-term">bean</bdi> [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C70000020405E06182.png" width="612" height="258" style="display:inline-block; margin:4px;width:16.18cm;height:6.826cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C70000020405E06182.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C70000020405E06182.png" width="612" height="258" style="display:inline-block; margin:4px;width:16.18cm;height:6.826cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C70000020405E06182.png" /></td></tr></table>
 
-<p>نقوم بإزالة جميع الأسطر الخاطئة من [1] وتغيير واجهة [<bdi dir="ltr" class="odt-ltr-term">IMetierLocal</bdi>] في الأسطر 13 و 21 إلى [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>]. في [2]، لم يعد هناك أخطاء. في [1]، قمنا بإزالة الأسطر 15-16، التي جعلت فئة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] حبة <em>في نطاق التطبيق.</em> سيتم نقل هذه المعلومات إلى ملف تكوين <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> [<bdi dir="ltr" class="odt-ltr-term">faces-config.xml</bdi>]. قمنا أيضًا بإزالة السطر 20، الذي كان يقوم بحقن مرجع من طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] في <bdi dir="ltr" class="odt-ltr-term">bean.</bdi> الآن، سيتم تهيئة هذا بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> لدينا بالفعل ملف التكوين الضروري؛ وهو الملف الموجود في مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">Business.</bdi> نقوم بنسخه:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003C800000177E9BE82DA.png" width="484" height="188" style="display:inline-block; margin:4px;width:12.806cm;height:4.962cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C800000177E9BE82DA.png" /></td></tr></table>
+<p>نقوم بإزالة جميع الأسطر الخاطئة من [1] وتغيير واجهة [<bdi dir="ltr" class="odt-ltr-term">IMetierLocal</bdi>] في الأسطر 13 و 21 إلى [<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>]. في [2]، لم يعد هناك أخطاء. في [1]، قمنا بإزالة الأسطر 15-16، التي جعلت فئة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] حبة <em>في نطاق التطبيق.</em> سيتم نقل هذه المعلومات إلى ملف تكوين <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> [<bdi dir="ltr" class="odt-ltr-term">faces-config.xml</bdi>]. قمنا أيضًا بإزالة السطر 20، الذي كان يقوم بحقن مرجع من طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] في <bdi dir="ltr" class="odt-ltr-term">bean.</bdi> الآن، سيتم تهيئة هذا بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> لدينا بالفعل ملف التكوين الضروري؛ وهو الملف الموجود في مشروع <bdi dir="ltr" class="odt-ltr-term">Spring / Business.</bdi> نقوم بنسخه:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003C800000177E9BE82DA.png" width="484" height="188" style="display:inline-block; margin:4px;width:12.806cm;height:4.962cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C800000177E9BE82DA.png" /></td></tr></table>
 
 <ul>
-  <li>في [1، 2]، ننسخ ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> من مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">Business</bdi> إلى مشروع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> / <bdi dir="ltr" class="odt-ltr-term">JSF</bdi>،
+  <li>في [1، 2]، ننسخ ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> من مشروع <bdi dir="ltr" class="odt-ltr-term">Spring / Business</bdi> إلى مشروع <bdi dir="ltr" class="odt-ltr-term">Spring / JSF</bdi>،
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A300000116D2C24468.png" width="210" height="139" style="display:inline-block; margin:4px;width:5.544cm;height:3.678cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A300000116D2C24468.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001A300000116D2C24468.png" width="210" height="139" style="display:inline-block; margin:4px;width:5.544cm;height:3.678cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A300000116D2C24468.png" /></td></tr></table>
 
 <p>في [3]، النتيجة.</p>
 <p>في حبة [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]، نحتاج إلى استخدام ملف التكوين هذا للحصول على مرجع إلى طبقة [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]. ويتم ذلك في طريقة [<bdi dir="ltr" class="odt-ltr-term">init</bdi>] الخاصة بها:</p>
@@ -1989,7 +1989,7 @@
 
 <p>بشكل عام، يجب إنشاء مثيلات مكونات <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> في طريقة <strong><bdi dir="ltr" class="odt-ltr-term">init</bdi></strong> الخاصة بالمكون <strong>ذي نطاق</strong> التطبيق. هناك طريقة أخرى يتم فيها إنشاء مثيلات المكونات بواسطة سيرفلت <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> يتضمن ذلك تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">web.xml</bdi>] وإضافة تبعية إلى عنصر [<bdi dir="ltr" class="odt-ltr-term">spring-web</bdi>]. لم نقم بذلك هنا للحفاظ على الاتساق مع ما تم استخدامه في الكود السابق.</p>
 <p>لقد أزلنا التعليقات التوضيحية في فئتي [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>] التي جعلتهما حبوب <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi> يجب أن تظل هذه الفئات حبوب <bdi dir="ltr" class="odt-ltr-term">JSF.</bdi> بدلاً من التعليقات التوضيحية، نستخدم الآن ملف تكوين <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> [<bdi dir="ltr" class="odt-ltr-term">WEB-INF/faces.config.xml</bdi>] لإعلان الحبوب.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000149000000E98C13DFE1.png" width="165" height="117" style="display:inline-block; margin:4px;width:4.353cm;height:3.083cm;" class="odt-zoomable" data-zoom-src="images/1000000000000149000000E98C13DFE1.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000149000000E98C13DFE1.png" width="165" height="117" style="display:inline-block; margin:4px;width:4.353cm;height:3.083cm;" class="odt-zoomable" data-zoom-src="images/1000000000000149000000E98C13DFE1.png" /></td></tr></table>
 
 <p>يبدو هذا الملف الآن كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2070,7 +2070,7 @@
 <p><a id="refheading7744830114625"></a></p>
 <h3 id="435">4.3.5. <span style="color: #000000">اختبار التطبيق</span></h3>
 <p><span style="color: #000000">أصبح تطبيقنا الآن خاليًا من الأخطاء وجاهزًا للاختبار:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005070000014AB282391E.png" width="644" height="165" style="display:inline-block; margin:4px;width:17.027cm;height:4.366cm;" class="odt-zoomable" data-zoom-src="images/10000000000005070000014AB282391E.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005070000014AB282391E.png" width="644" height="165" style="display:inline-block; margin:4px;width:17.027cm;height:4.366cm;" class="odt-zoomable" data-zoom-src="images/10000000000005070000014AB282391E.png" /></td></tr></table>
 
 <ul>
   <li><span style="color: #000000">في [1]، المشروع المصحح،</span>
@@ -2081,10 +2081,10 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049C0000020228DFB041.png" width="590" height="257" style="display:inline-block; margin:4px;width:15.61cm;height:6.8cm;" class="odt-zoomable" data-zoom-src="images/100000000000049C0000020228DFB041.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000049C0000020228DFB041.png" width="590" height="257" style="display:inline-block; margin:4px;width:15.61cm;height:6.8cm;" class="odt-zoomable" data-zoom-src="images/100000000000049C0000020228DFB041.png" /></td></tr></table>
 
 <p><span style="color: #000000">من هناك، نرى التطبيق الذي كنا ندرسه. سنترك للقارئ التحقق من أنه يعمل. الآن دعونا نوقف التطبيق:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002F40000018B8CFFB55F.png" width="378" height="197" style="display:inline-block; margin:4px;width:10.001cm;height:5.225cm;" class="odt-zoomable" data-zoom-src="images/10000000000002F40000018B8CFFB55F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002F40000018B8CFFB55F.png" width="378" height="197" style="display:inline-block; margin:4px;width:10.001cm;height:5.225cm;" class="odt-zoomable" data-zoom-src="images/10000000000002F40000018B8CFFB55F.png" /></td></tr></table>
 
 <ul>
   <li><span style="color: #000000">في [1]، قمنا بإلغاء تحميل التطبيق،</span>
@@ -2109,7 +2109,7 @@
 <p><span style="color: #000000">تشير السطران 2 و 4 إلى حدوث خلل عند إيقاف تشغيل التطبيق. يشير السطر 4 إلى وجود خطر محتمل لحدوث تسرب في الذاكرة. وبالفعل، يحدث هذا، وبعد فترة يصبح <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> غير قابل للاستخدام. هذه المشكلة مزعجة بشكل خاص لأن <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> يجب إعادة تشغيله في كل مرة يتم فيها تشغيل المشروع. وقد تمت الإشارة إلى هذه المشكلة بالفعل في الوثيقة &quot;مقدمة إلى <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 بالأمثلة&quot; [</span><a href="http://tahe.developpez.com/java/struts2"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://tahe.developpez.com/java/struts2</bdi></span></u></a><span style="color: #000000">].</span></p>
 <p><span style="color: #000000">هناك الكثير من المعلومات المتاحة عبر الإنترنت حول هذا الخطأ. يحدث هذا الخطأ عند تحميل وتفريغ تطبيق بشكل متكرر من <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> بعد فترة، يظهر الخطأ </span><em><bdi dir="ltr" class="odt-ltr-term">java.lang.OutOfMemoryError: PermGen space</bdi></em><span style="color: #000000">. يبدو أنه لا يوجد حل لمنع هذا الخطأ عندما ينشأ من مكتبات (<bdi dir="ltr" class="odt-ltr-term">JARs</bdi>) تابعة لجهات خارجية، كما هو الحال هنا. يجب عليك عندئذ إعادة تشغيل <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> لحل المشكلة.</span></p>
 <p><span style="color: #000000">ومع ذلك، يمكنك تأخير حدوث هذا الخطأ. أولاً، قم بزيادة مساحة الذاكرة التي تم تجاوزها.</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000367000002052FBC5FCE.png" width="436" height="259" style="display:inline-block; margin:4px;width:11.523cm;height:6.84cm;" class="odt-zoomable" data-zoom-src="images/1000000000000367000002052FBC5FCE.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000367000002052FBC5FCE.png" width="436" height="259" style="display:inline-block; margin:4px;width:11.523cm;height:6.84cm;" class="odt-zoomable" data-zoom-src="images/1000000000000367000002052FBC5FCE.png" /></td></tr></table>
 
 <ul>
   <li><span style="color: #000000">في [1]، انتقل إلى خصائص خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi>،</span>
@@ -2119,7 +2119,7 @@
 </ul>
 
 <p><span style="color: #000000">بعد ذلك، ضع برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi> في </span><em>&lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;/lib،</em> <span style="color: #000000">حيث </span><em>&lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;</em> <span style="color: #000000">هو دليل تثبيت <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi></span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003C6000001E210836A2C.png" width="483" height="241" style="display:inline-block; margin:4px;width:12.779cm;height:6.376cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C6000001E210836A2C.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003C6000001E210836A2C.png" width="483" height="241" style="display:inline-block; margin:4px;width:12.779cm;height:6.376cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C6000001E210836A2C.png" /></td></tr></table>
 
 <ul>
   <li><span style="color: #000000">في [1]، ضمن خصائص <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi>، لاحظ دليل التثبيت &lt;<bdi dir="ltr" class="odt-ltr-term">tomcat</bdi>&gt;،</span>
@@ -2129,7 +2129,7 @@
 </ul>
 
 <p><span style="color: #000000">بعد ذلك، قم بإزالة تبعية المشروع لمحرك <bdi dir="ltr" class="odt-ltr-term">MySQL JDBC</bdi> [4].</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000244000001BF5F660EE8.png" width="290" height="224" style="display:inline-block; margin:4px;width:7.673cm;height:5.914cm;" class="odt-zoomable" data-zoom-src="images/1000000000000244000001BF5F660EE8.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000244000001BF5F660EE8.png" width="290" height="224" style="display:inline-block; margin:4px;width:7.673cm;height:5.914cm;" class="odt-zoomable" data-zoom-src="images/1000000000000244000001BF5F660EE8.png" /></td></tr></table>
 
 <p><span style="color: #000000">بمجرد الانتهاء من ذلك، اختبر التطبيق. ستجد أنه يمكنك تحميل التطبيق وإلغاء تحميله بشكل متكرر. ومع ذلك، لم يتم حل مشكلات تسرب الذاكرة؛ بل إنها تحدث لاحقًا فحسب.</span></p>
 <p><a id="refheading7745030114625"></a></p>
@@ -2137,7 +2137,7 @@
 <p><span style="color: #000000">قمنا بترحيل تطبيق <bdi dir="ltr" class="odt-ltr-term">JSF/EJB/GlassFish</bdi> إلى بيئة <bdi dir="ltr" class="odt-ltr-term">JSF/Spring/Tomcat.</bdi> تم ذلك بشكل أساسي عن طريق النسخ واللصق بين المشروعين. كان ذلك ممكنًا لأن <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> و <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> يشتركان في العديد من أوجه التشابه. في الواقع، تم إنشاء <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> بعد أن أثبت <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> أنه أكثر كفاءة من <bdi dir="ltr" class="odt-ltr-term">EJB2.</bdi> ثم أدمج <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> أفضل ميزات <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi></span></p>
 <p><a id="refheading78686566070260"></a></p>
 <h2 id="45-eclipse">4.5. <span style="color: #4f81bd">الاختبارات باستخدام <bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi></span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051600000153E5CD7488.png" width="651" height="170" style="display:inline-block; margin:4px;width:17.224cm;height:4.486cm;" class="odt-zoomable" data-zoom-src="images/100000000000051600000153E5CD7488.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000051600000153E5CD7488.png" width="651" height="170" style="display:inline-block; margin:4px;width:17.224cm;height:4.486cm;" class="odt-zoomable" data-zoom-src="images/100000000000051600000153E5CD7488.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، قم باستيراد مشاريع <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> الثلاثة،
@@ -2146,9 +2146,9 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B700000157430DBD23.png" width="604" height="172" style="display:inline-block; margin:4px;width:15.968cm;height:4.538cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B700000157430DBD23.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004B700000157430DBD23.png" width="604" height="172" style="display:inline-block; margin:4px;width:15.968cm;height:4.538cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B700000157430DBD23.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A800000151BC16ED18.png" width="596" height="168" style="display:inline-block; margin:4px;width:15.769cm;height:4.457cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A800000151BC16ED18.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004A800000151BC16ED18.png" width="596" height="168" style="display:inline-block; margin:4px;width:15.769cm;height:4.457cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A800000151BC16ED18.png" /></td></tr></table>
 
 <ul>
   <li>في [4]، نجح الاختبار،
@@ -2157,7 +2157,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051400000175F3BAD7CA.png" width="650" height="187" style="display:inline-block; margin:4px;width:17.198cm;height:4.935cm;" class="odt-zoomable" data-zoom-src="images/100000000000051400000175F3BAD7CA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000051400000175F3BAD7CA.png" width="650" height="187" style="display:inline-block; margin:4px;width:17.198cm;height:4.935cm;" class="odt-zoomable" data-zoom-src="images/100000000000051400000175F3BAD7CA.png" /></td></tr></table>
 
 <ul>
   <li>في [6A] و[6B]، قم بتشغيل عميل وحدة التحكم لطبقة [الأعمال]،
@@ -2166,14 +2166,14 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051100000124125B34D0.png" width="649" height="146" style="display:inline-block; margin:4px;width:17.159cm;height:3.863cm;" class="odt-zoomable" data-zoom-src="images/100000000000051100000124125B34D0.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000051100000124125B34D0.png" width="649" height="146" style="display:inline-block; margin:4px;width:17.159cm;height:3.863cm;" class="odt-zoomable" data-zoom-src="images/100000000000051100000124125B34D0.png" /></td></tr></table>
 
 <ul>
   <li>في [8] [9]، نقوم بتشغيل مشروع الويب على خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> 7 [10]،
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000029A000002339A022B85.png" width="333" height="281" style="display:inline-block; margin:4px;width:8.811cm;height:7.447cm;" class="odt-zoomable" data-zoom-src="images/100000000000029A000002339A022B85.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000029A000002339A022B85.png" width="333" height="281" style="display:inline-block; margin:4px;width:8.811cm;height:7.447cm;" class="odt-zoomable" data-zoom-src="images/100000000000029A000002339A022B85.png" /></td></tr></table>
 
 <ul>
   <li>في [11]، يتم عرض الصفحة الرئيسية للتطبيق في المتصفح الداخلي لـ <bdi dir="ltr" class="odt-ltr-term">Eclipse.</bdi>
